@@ -1,6 +1,7 @@
 import "./globals.css";
 import type { Metadata } from "next";
 import { ThemeProvider } from "@/provider/theme-provider";
+import { ScrollProgress } from "@/components/magicui/scroll-progress";
 
 export const metadata: Metadata = {
   title: "YM | Portfólio",
@@ -17,6 +18,7 @@ export default function RootLayout({
       <body
         className={`antialiased`}
       >
+        <ScrollProgress />
         <ThemeProvider
           attribute="class"
           defaultTheme="system"

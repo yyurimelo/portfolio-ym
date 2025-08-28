@@ -47,7 +47,7 @@ export default function Hero() {
   }, [resolvedTheme]);
 
   return (
-    <Section className="fade-bottom flex min-h-screen items-center justify-center relative">
+    <Section className="fade-bottom flex min-h-screen items-center justify-center relative ">
       <Particles
         className="absolute inset-0 z-0"
         quantity={100}
@@ -55,7 +55,7 @@ export default function Hero() {
         color={color}
         refresh
       />
-      <div className="max-w-container mx-auto flex flex-col gap-12 pt-16 sm:gap-24">
+      <div className="max-w-container mx-auto flex flex-col gap-12 sm:gap-24">
         <div className="flex flex-col items-center gap-6 text-center sm:gap-12">
           <div className="flex gap-10">
             <div>
