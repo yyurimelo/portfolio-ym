@@ -57,7 +57,7 @@ export default function Hero() {
       />
       <div className="max-w-container mx-auto flex flex-col gap-12 sm:gap-24">
         <div className="flex flex-col items-center gap-6 text-center sm:gap-12">
-          <div className="flex gap-10">
+          <div className="flex flex-col-reverse md:flex-row gap-10 items-center md:items-start">
             <div>
               <BoxReveal boxColor={"#ab0fff"} duration={0.5}>
                 <p className="md:text-[3rem] text-2xl font-semibold">
