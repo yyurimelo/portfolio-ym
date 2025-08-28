@@ -2,10 +2,11 @@
 
 import { useState } from "react";
 
-
-
 // icons
-import { Github, Instagram, Linkedin, Mail } from "lucide-react";
+import { Mail } from "lucide-react";
+import { GitHubLogoIcon, InstagramLogoIcon, LinkedInLogoIcon } from "@radix-ui/react-icons";
+
+// components
 import {
   ResponsiveDialog,
   ResponsiveDialogContent,
@@ -15,8 +16,6 @@ import {
 } from "@/components/ui/responsive-dialog";
 import { Separator } from "@/components/ui/separator";
 import { InteractiveHoverButton } from "@/components/magicui/interactive-hover-button";
-
-
 
 export function ContactButton() {
   const [open, setOpen] = useState(false);
@@ -44,17 +43,17 @@ export function ContactButton() {
           </div>
           <Separator />
           <div className="flex gap-2 justify-between items-center">
-            <Linkedin className="size-5" />
+            <LinkedInLogoIcon className="size-5" />
             <a href="https://www.linkedin.com/in/yyurimelo/">yyurimelo</a>
           </div>
           <Separator />
           <div className="flex gap-2 justify-between items-center">
-            <Github className="size-5" />
+            <GitHubLogoIcon className="size-5" />
             <a href="https://github.com/yyurimelo">yyurimelo</a>
           </div>
           <Separator />
           <div className="flex gap-2 justify-between items-center">
-            <Instagram className="size-5" />
+            <InstagramLogoIcon className="size-5" />
             <a href="https://www.instagram.com/yyurimelo/">@yyurimelo</a>
           </div>
         </section>

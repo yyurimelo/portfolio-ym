@@ -1,8 +1,7 @@
 "use client";
 
-import { cn } from "@/lib/utils";
-import LanguagesRotate from "./languages-rotate/page";
-import Writing from "./writing/page";
+import { LanguagesRotate } from "./languages-rotate";
+import { Writing } from "./writing";
 // import { DotPattern } from "@/components/magicui/dot-pattern";
 import { motion } from "motion/react";
 import { Section } from "@/components/ui/section";

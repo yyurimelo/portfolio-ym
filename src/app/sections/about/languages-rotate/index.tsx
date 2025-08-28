@@ -16,7 +16,7 @@ const images = slugs.map(
     `https://cdn.simpleicons.org/${slug.toLowerCase()}/${slug.toLowerCase()}`
 );
 
-export default function LanguagesRotate() {
+export function LanguagesRotate() {
   return (
     <div>
       <WordRotate

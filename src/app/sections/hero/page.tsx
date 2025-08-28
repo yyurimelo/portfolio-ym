@@ -3,12 +3,11 @@
 import { BoxReveal } from "@/components/magicui/box-reveal";
 import { Particles } from "@/components/magicui/particles";
 import { Section } from "@/components/ui/section";
-import { cn } from "@/lib/utils";
 import { useTheme } from "next-themes";
 import { useEffect, useState } from "react";
 import Image from "next/image";
 import { Button } from "@/components/ui/button";
-import { ContactButton } from "./contact-details/page";
+import { ContactButton } from "./contact-details";
 import Me from "./me/page";
 
 

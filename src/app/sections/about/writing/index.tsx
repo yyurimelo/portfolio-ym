@@ -1,6 +1,6 @@
 import { AuroraText } from "@/components/magicui/aurora-text";
 
-export default function Writing() {
+export function Writing() {
   const nowYear = new Date().getFullYear();
   const birthYear = 2006;
   const age = nowYear - birthYear;
