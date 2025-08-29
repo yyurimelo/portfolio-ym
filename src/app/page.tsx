@@ -1,5 +1,6 @@
 import About from "./sections/about/page";
 import Hero from "./sections/hero/page";
+import Portfolio from "./sections/portfolio";
 import Skills from "./sections/skills/page";
 
 export default function Home() {
@@ -8,6 +9,7 @@ export default function Home() {
       <Hero />
       <About />
       <Skills />
+      {/* <Portfolio /> */}
     </main>
   );
 }
