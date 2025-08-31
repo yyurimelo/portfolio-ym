@@ -23,7 +23,7 @@ export default function FullStackSkills() {
         <p className="text-sm md:text-base text-muted-foreground">
           Atuo como desenvolvedor full stack, com domínio em tecnologias de
           front-end como HTML, CSS, JavaScript, TypeScript, React e Next.js,
-          aliadas a ferramentas modernas como Tailwind CSS e ShadCN UI para
+          aliadas a ferramentas modernas como Tailwind CSS e ShadCN/UI para
           construção de interfaces responsivas e performáticas. No back-end,
           tenho experiência com Node.js, NestJS, .NET com C#, e bancos de dados
           relacionais e não relacionais como MySQL e MongoDB. <br></br>

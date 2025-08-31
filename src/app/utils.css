@@ -43,9 +43,19 @@
 @utility fade-top-lg {
   mask-image: linear-gradient(to bottom, transparent 15%, black 100%);
 }
+
+@utility fade-top-md {
+  mask-image: linear-gradient(to bottom, transparent 10%, black 100%);
+}
+
 @utility fade-bottom-lg {
   mask-image: linear-gradient(to top, transparent 15%, black 100%);
 }
+
+@utility fade-bottom-md {
+  mask-image: linear-gradient(to top, transparent 5%, black 100%);
+}
+
 @utility fade-left {
   mask-image: linear-gradient(to right, transparent 0%, black 35%);
 }

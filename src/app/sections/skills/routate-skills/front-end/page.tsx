@@ -12,7 +12,7 @@ export default function FrontEndSkills() {
           Atuo no desenvolvimento front-end utilizando HTML, CSS, JavaScript,
           TypeScript, React, Next.js e React Native. Além disso, tenho
           experiência com Figma, criando protótipos e designs colaborativos.
-          Aliado a ferramentas como Tailwind CSS e ShadCN UI, crio interfaces
+          Aliado a ferramentas como Tailwind CSS e ShadCN/UI, crio interfaces
           responsivas e de alto desempenho, garantindo uma experiência de
           usuário fluida e agradável.
         </p>
