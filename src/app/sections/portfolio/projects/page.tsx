@@ -2,7 +2,7 @@
 import { useEffect, useState } from "react";
 import { Sheet, SheetContent, SheetTitle, SheetTrigger } from "@/components/ui/sheet";
 import { Button } from "@/components/ui/button";
-import Showcase from "./showcase";
+import { Showcase } from "./showcase";
 
 export function Projects() {
   const [open, setOpen] = useState(false);

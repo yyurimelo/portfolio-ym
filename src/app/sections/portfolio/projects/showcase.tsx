@@ -3,7 +3,7 @@ import { ProjectCard } from "../project-card";
 import { DATA } from "../data.resume";
 import { Section } from "@/components/ui/section";
 
-export default function Showcase() {
+export function Showcase() {
 
   return (
     <Section className=" overflow-hidden pb-0 sm:pb-0 md:pb-0">
