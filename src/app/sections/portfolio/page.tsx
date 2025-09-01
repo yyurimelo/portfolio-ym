@@ -1,7 +1,7 @@
 import { Section } from "@/components/ui/section";
 import { ProjectCard } from "./project-card";
 import { DATA } from "./data.resume";
-import { Projects } from "./projects/page";
+import { Projects } from "./projects";
 
 
 export default function Portfolio() {
