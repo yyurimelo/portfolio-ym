@@ -1,8 +1,7 @@
 import { Section } from "@/components/ui/section";
 import { ProjectCard } from "./project-card";
 import { DATA } from "./data.resume";
-import { Button } from "@/components/ui/button";
-import Link from "next/link";
+import { Projects } from "./projects/page";
 
 
 export default function Portfolio() {
@@ -20,7 +19,7 @@ export default function Portfolio() {
           </p>
         </div>
         <div className="relative grid grid-cols-1 gap-3 sm:grid-cols-2 max-w-[600px] mx-auto fade-bottom-md lg:fade-bottom-lg">
-          {DATA.projects.map((project) => (
+          {DATA.projects.slice(0, 4).map((project) => (
             <ProjectCard
               href={project.href}
               key={project.title}
@@ -36,11 +35,7 @@ export default function Portfolio() {
         </div>
 
         <div className="relative -mt-50 z-20 flex justify-center">
-          <Link href={"/sections/projects"}>
-            <Button className="bg-secondary-foreground hover:bg-secondary-foreground/80 cursor-pointer">
-              Saiba mais
-            </Button>
-          </Link>
+          <Projects />
         </div>
       </div>
     </Section >

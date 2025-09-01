@@ -54,7 +54,7 @@ export const DATA = {
       ],
       image: "",
       video:
-        "/agile-preview.mp4",
+        "/agile-preview-cut.mp4",
     },
     {
       title: "Landing page Agile",
@@ -66,7 +66,7 @@ export const DATA = {
       technologies: [
         "React",
         "Next.js",
-        "Typescript",
+        "`Typescript",
         "TailwindCSS",
         "Shadcn",
         "Magicui",
@@ -104,6 +104,29 @@ export const DATA = {
       image: "",
       video:
         "/agile-docs-preview.mp4",
+    },
+    {
+      title: "MOBI",
+      href: "",
+      dates: "Fev 2023 - Dez 2023",
+      active: true,
+      description:
+        "Desenvolvi a documentação completa do Agile, detalhando funcionalidades, fluxos e módulos da plataforma para facilitar o uso e a manutenção do sistema.",
+      technologies: [
+        "Mintlify",
+        "MDX",
+        "TailwindCSS",
+      ],
+      // links: [
+      //   {
+      //     type: "Website",
+      //     href: "https://agile-docs.3code.com.br/",
+      //     icon: <Globe className="size-3" />,
+      //   },
+      // ],
+      image: "/mobi-login.jpg",
+      // video:
+      //   "/agile-docs-preview.mp4",
     },
   ]
 }

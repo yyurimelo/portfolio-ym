@@ -1,6 +1,7 @@
 import { Badge } from "@/components/ui/badge";
 import { Card, CardContent, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
 import Link from "next/link";
+import Image from "next/image";
 
 interface Props {
   title: string;
@@ -45,6 +46,15 @@ export function ProjectCard({
           muted
           playsInline
           className="pointer-events-none mx-auto h-40 w-full object-cover object-top" // needed because random black line at bottom of video
+        />
+      )}
+      {image && (
+        <Image
+          src={image}
+          alt={title}
+          width={500}
+          height={300}
+          className="h-40 w-full overflow-hidden object-cover object-top"
         />
       )}
       <CardHeader className="px-2">
