@@ -3,7 +3,6 @@ import { ProjectCard } from "./project-card";
 import { DATA } from "./data.resume";
 import { Projects } from "./projects";
 
-
 export default function Portfolio() {
   return (
     <Section className=" overflow-hidden pb-0 sm:pb-0 md:pb-0 border-t">
