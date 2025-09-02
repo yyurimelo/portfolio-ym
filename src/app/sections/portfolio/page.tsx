@@ -1,9 +1,14 @@
+"use client"
+
 import { Section } from "@/components/ui/section";
 import { ProjectCard } from "./project-card";
 import { DATA } from "./data.resume";
-import { Projects } from "./projects";
+import { Button } from "@/components/ui/button";
+import { useRouter } from "next/navigation";
 
 export default function Portfolio() {
+  const router = useRouter()
+
   return (
     <Section className=" overflow-hidden pb-0 sm:pb-0 md:pb-0 border-t">
       <div className="max-w-container mx-auto flex flex-col gap-12 pt-12 sm:gap-16">
@@ -34,7 +39,11 @@ export default function Portfolio() {
         </div>
 
         <div className="relative -mt-50 z-20 flex justify-center">
-          <Projects />
+          <Button
+            onClick={() => router.push("/showcase")}
+            className="bg-secondary-foreground hover:bg-secondary-foreground/80 cursor-pointer">
+            Saiba mais
+          </Button>
         </div>
       </div>
     </Section >
