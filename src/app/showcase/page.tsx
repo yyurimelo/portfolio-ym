@@ -35,11 +35,13 @@ export default function Showcase() {
               key={project.title}
               title={project.title}
               description={project.description}
+              resume={project.resume ?? ""}
               dates={project.dates}
               tags={project.technologies}
               image={project.image}
               video={project.video}
               links={project?.links ?? []}
+              isOpen
             />
           </BlurFade>
         ))}
