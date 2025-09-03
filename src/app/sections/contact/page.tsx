@@ -41,7 +41,10 @@ export default function Contact() {
             <span className="uppercase tracking-wide font-semibold text-muted-foreground">
               Entre em contato comigo
             </span>
-            <a  href="https://wa.me/5521976676575?text=Ol%C3%A1%20Yuri%2C%20tudo%20bem%3F%20Encontrei%20seu%20portf%C3%B3lio%20e%20gostaria%20de%20conversar%20sobre%20oportunidades%20ou%20colabora%C3%A7%C3%B5es%20profissionais." target="_blank">
+            <a
+              href="https://wa.me/5521976676575?text=Ol%C3%A1%20Yuri%2C%20tudo%20bem%3F%20Encontrei%20seu%20portf%C3%B3lio%20e%20gostaria%20de%20conversar%20sobre%20oportunidades%20ou%20colabora%C3%A7%C3%B5es%20profissionais."
+              target="_blank"
+            >
               <Button size={"lg"} variant={"default"} className="text-white cursor-pointer">
                 Enviar via WhatsApp
               </Button>
