@@ -7,6 +7,7 @@ import { Button } from "@/components/ui/button";
 import { Separator } from "@/components/ui/separator";
 import { Calendar, ExternalLink, Globe, Play } from "lucide-react";
 import Link from "next/link";
+import { CarouselProject } from "./carousel-project";
 
 type Props = {
   open: boolean;
@@ -18,7 +19,10 @@ type Props = {
   tags: readonly string[];
   link?: string;
   image?: string;
+  carousel?: string[];
+  wallpaper?: string;
   video?: string;
+  video2?: string;
   links?: readonly {
     icon: React.ReactNode;
     type: string;
@@ -36,7 +40,10 @@ export function DetailsProject({
   tags,
   link,
   video,
+  video2,
   image,
+  wallpaper,
+  carousel,
   links,
 }: Props) {
   return (
@@ -86,13 +93,15 @@ export function DetailsProject({
         <div className="flex-1 overflow-y-auto">
           <div className="p-6">
             {/* Seção de mídia */}
-            {(video || image) && (
+            {(video || image || carousel) && (
               <div className="mb-8">
                 <div className="rounded-xl overflow-hidden shadow-lg border">
-                  {video ? (
+                  {video || video2 ? (
                     <video
-                      src={video}
+                      src={video2 || video}
                       controls
+                      autoPlay
+                      loop
                       className="w-full h-auto max-h-[80vh] rounded-xl"
                     />
                   ) : image ? (
@@ -102,6 +111,10 @@ export function DetailsProject({
                         alt={title}
                         className="w-full h-auto rounded-xl"
                       />
+                    </div>
+                  ) : carousel ? (
+                    <div className="flex justify-center items-center">
+                      <CarouselProject carousel={carousel} />
                     </div>
                   ) : null}
                 </div>

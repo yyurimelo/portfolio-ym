@@ -14,7 +14,10 @@ interface Props {
   tags: readonly string[];
   link?: string;
   image?: string;
+  carousel?: string[];
+  wallpaper?: string;
   video?: string;
+  video2?: string;
   links?: readonly {
     icon: React.ReactNode;
     type: string;
@@ -33,7 +36,10 @@ export function ProjectCard({
   tags,
   link,
   image,
+  carousel,
+  wallpaper,
   video,
+  video2,
   links,
   className,
   isOpen
@@ -58,9 +64,9 @@ export function ProjectCard({
             className="pointer-events-none mx-auto h-40 w-full object-cover object-top"
           />
         )}
-        {image && (
+        {image || wallpaper && (
           <Image
-            src={image}
+            src={wallpaper ? wallpaper : image!}
             alt={title}
             width={500}
             height={300}
@@ -117,7 +123,7 @@ export function ProjectCard({
           title={title}
           description={description}
           dates={dates}
-          {...{ href, tags, link, image, video, links, className }}
+          {...{ href, tags, link, image, video, video2, links, className, carousel, wallpaper }}
         />
       )}
     </>

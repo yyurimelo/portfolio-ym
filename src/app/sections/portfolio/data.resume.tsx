@@ -41,8 +41,9 @@ Resultados esperados:
           icon: <Globe className="size-3" />,
         },
       ],
-      image: "",
+      wallpaper: "",
       video: "/agile-preview-cut.mp4",
+      video2: "/agile-preview.mp4"
     },
     {
       title: "Documentação do Agile",
@@ -112,8 +113,8 @@ Resultados:
           icon: <Globe className="size-3" />,
         },
       ],
-      image: "",
       video: "/landing-page-agile-preview.mp4",
+      video2: ""
     },
     {
       title: "E-commerce Estudantil",
@@ -171,7 +172,14 @@ Resultados:
         "Java Spring Boot",
         "OpenStreetMap API",
       ],
-      image: "/mobi-login.jpg",
+      image: "",
+      carousel: [
+        "/mobi-sign-in.jpeg",
+        "/mobi-dashboard.jpeg",
+        "/mobi-form.jpeg",
+        "/mobi-router.jpeg",
+      ],
+      wallpaper: "/mobi-wallpaper.jpeg",
       video: "",
       links: [],
     },

@@ -33,7 +33,10 @@ export default function Portfolio() {
               dates={project.dates}
               tags={project.technologies}
               image={project.image}
+              carousel={project.carousel ?? []}
+              wallpaper={project.wallpaper}
               video={project.video}
+              video2={project.video2}
               links={project?.links ?? []}
             />
           ))}
