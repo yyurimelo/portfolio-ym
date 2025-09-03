@@ -29,9 +29,10 @@ export function CardsFrontEnd() {
         {slugs.map((slug, index) => (
           <div
             key={slug}
-            className="relative overflow-hidden rounded-md bg-muted-foreground/4 p-4 shadow-md flex justify-center items-center group transition-transform md:hover:scale-105 duration-200 ease-in-out cursor-pointer"
+            className="group relative overflow-hidden rounded-md bg-muted-foreground/4 p-4 shadow-md flex justify-center items-center cursor-pointer
+                       transition-transform duration-200 ease-in-out md:hover:scale-105"
           >
-            <div className="absolute inset-0 rounded-md transition-opacity duration-200 md:opacity-0 md:group-hover:opacity-100">
+            <div className="absolute inset-0 rounded-md transition-opacity duration-200 opacity-0 md:group-hover:opacity-100">
               <ShineBorder shineColor={["#ab0fff", "#8833ff", "#3aa3ff"]} />
             </div>
 
