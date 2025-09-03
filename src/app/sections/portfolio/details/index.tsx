@@ -128,7 +128,8 @@ export function DetailsProject({
                   {links.map((l, index) => (
                     <Link href={l.href} key={index} target="_blank">
                       <Button
-                        className="flex gap-2 px-2 py-1 bg-secondary-foreground hover:bg-secondary-foreground/80 cursor-pointer"
+                        variant={"secondary"}
+                        className="flex gap-2 px-2 py-1 bg-secondary-foreground hover:bg-secondary-foreground/80 text-secondary cursor-pointer"
                       >
                         {l.icon}
                         {l.type}

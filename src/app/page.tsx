@@ -6,7 +6,8 @@ import Hero from "./sections/hero/page";
 import Portfolio from "./sections/portfolio/page";
 
 import Skills from "./sections/skills/page";
-import Works from "./sections/work/page";
+import Contact from "./sections/contact/page";
+import FooterSection from "./sections/footer/default";
 
 export default function Home() {
   return (
@@ -16,7 +17,8 @@ export default function Home() {
       <About />
       <Skills />
       <Portfolio />
-      <Works />
+      <Contact />
+      <FooterSection />
     </main>
   );
 }

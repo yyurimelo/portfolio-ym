@@ -40,7 +40,8 @@ export default function Portfolio() {
         <div className="relative -mt-50 z-20 flex justify-center">
           <Button
             onClick={() => router.push("/showcase")}
-            className="bg-secondary-foreground hover:bg-secondary-foreground/80 cursor-pointer">
+            variant={"secondary"}
+            className="bg-secondary-foreground hover:bg-secondary-foreground/80 text-secondary cursor-pointer">
             Saiba mais
           </Button>
         </div>
