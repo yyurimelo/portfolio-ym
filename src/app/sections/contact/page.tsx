@@ -1,6 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { Section } from "@/components/ui/section";
-import { Mail, Phone } from "lucide-react";
+import { Mail, MapPin, Phone } from "lucide-react";
 
 export default function Contact() {
   return (
@@ -31,9 +31,14 @@ export default function Contact() {
               </div>
             </div>
 
-            <div className="flex items-start gap-3">
+            <div className="flex items-center gap-3">
               <Mail className="text-primary w-6 h-6 mt-1" />
               <p className="font-medium">yuri.devsy@gmail.com</p>
+            </div>
+
+            <div className="flex items-center gap-3">
+              <MapPin className="text-primary w-6 h-6 mt-1" />
+              <p className="font-medium">Brasil - Rio de Janeiro</p>
             </div>
           </div>
 
