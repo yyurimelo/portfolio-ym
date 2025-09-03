@@ -2,9 +2,10 @@
 
 import { Section } from "@/components/ui/section";
 import { ProjectCard } from "./project-card";
-import { DATA } from "./data.resume";
+
 import { Button } from "@/components/ui/button";
 import { useRouter } from "next/navigation";
+import { DATA } from "./DATA";
 
 export default function Portfolio() {
   const router = useRouter();

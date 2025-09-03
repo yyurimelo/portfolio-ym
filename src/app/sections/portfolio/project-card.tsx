@@ -3,7 +3,8 @@ import { Card, CardContent, CardFooter, CardHeader, CardTitle } from "@/componen
 import Link from "next/link";
 import Image from "next/image";
 import { useState } from "react";
-import { DetailsProject } from "./details-project";
+import { DetailsProject } from "./details";
+
 
 interface Props {
   title: string;

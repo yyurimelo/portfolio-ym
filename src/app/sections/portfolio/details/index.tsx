@@ -7,7 +7,8 @@ import { Button } from "@/components/ui/button";
 import { Separator } from "@/components/ui/separator";
 import { ExternalLink, Globe } from "lucide-react";
 import Link from "next/link";
-import { CarouselProject } from "./carousel-project";
+import { CarouselProject } from "../carousel-project";
+
 
 type Props = {
   open: boolean;
