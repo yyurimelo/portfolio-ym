@@ -5,7 +5,7 @@ import { Dispatch } from "react";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Separator } from "@/components/ui/separator";
-import { Calendar, ExternalLink, Globe, Play } from "lucide-react";
+import { ExternalLink, Globe } from "lucide-react";
 import Link from "next/link";
 import { CarouselProject } from "./carousel-project";
 
@@ -17,14 +17,15 @@ type Props = {
   description: string;
   dates: string;
   tags: readonly string[];
-  link?: string;
-  image?: string;
-  carousel?: string[];
-  wallpaper?: string;
-  video?: string;
-  video2?: string;
+  media: {
+    image: string | null;
+    video: string | null;
+    video2: string | null;
+    wallpaper: string | null;
+    carousel: string[] | null;
+  };
   links?: readonly {
-    icon: React.ReactNode;
+    icon: React.ReactNode | null;
     type: string;
     href: string;
   }[];
@@ -38,12 +39,8 @@ export function DetailsProject({
   description,
   dates,
   tags,
-  link,
-  video,
-  video2,
-  image,
-  wallpaper,
-  carousel,
+  href,
+  media,
   links,
 }: Props) {
   return (
@@ -62,20 +59,10 @@ export function DetailsProject({
                   <span>{dates}</span>
                 </div>
               </div>
-
-              {/* Botão principal no header */}
-              {link && (
-                <Button asChild size="lg" className="ml-4">
-                  <a href={link} target="_blank" rel="noopener noreferrer">
-                    <ExternalLink className="w-4 h-4 mr-2" />
-                    Ver Projeto
-                  </a>
-                </Button>
-              )}
             </div>
 
             {/* Tags no header */}
-            <div className=" flex flex-wrap gap-1">
+            <div className="flex flex-wrap gap-1">
               {tags?.map((tag) => (
                 <Badge
                   className="px-1 py-0 text-[10px]"
@@ -93,28 +80,28 @@ export function DetailsProject({
         <div className="flex-1 overflow-y-auto">
           <div className="p-6">
             {/* Seção de mídia */}
-            {(video || image || carousel) && (
+            {(media.video || media.image || media.carousel) && (
               <div className="mb-8">
                 <div className="rounded-xl overflow-hidden shadow-lg border">
-                  {video || video2 ? (
+                  {media.video || media.video2 ? (
                     <video
-                      src={video2 || video}
+                      src={media.video2 || media.video!}
                       controls
                       autoPlay
                       loop
                       className="w-full h-auto max-h-[80vh] rounded-xl"
                     />
-                  ) : image ? (
+                  ) : media.image ? (
                     <div className="relative">
                       <img
-                        src={image}
+                        src={media.image}
                         alt={title}
                         className="w-full h-auto rounded-xl"
                       />
                     </div>
-                  ) : carousel ? (
+                  ) : media.carousel ? (
                     <div className="flex justify-center items-center">
-                      <CarouselProject carousel={carousel} />
+                      <CarouselProject carousel={media.carousel} />
                     </div>
                   ) : null}
                 </div>
@@ -127,7 +114,7 @@ export function DetailsProject({
                 Descrição do projeto
               </h3>
               <div className="prose prose-sm max-w-none">
-                <div className="whitespace-pre-line text-muted-foreground leading-relaxed rounded-lg p-4 border">
+                <div className="whitespace-pre-line text-muted-foreground text-xs md:text-base leading-relaxed rounded-lg p-4 border">
                   {description}
                 </div>
               </div>
@@ -138,14 +125,12 @@ export function DetailsProject({
               <div className="mb-8">
                 <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3">
                   {links.map((l, index) => (
-                    <Link href={l.href} key={index}>
+                    <Link href={l.href} key={index} target="_blank">
                       <Button
-                        key={l.href || index}
-
                         className="flex gap-2 px-2 py-1 bg-secondary-foreground hover:bg-secondary-foreground/80 cursor-pointer"
                       >
-                        <Globe className="h-8 w-8" />
-                        Website
+                        {l.icon}
+                        {l.type}
                       </Button>
                     </Link>
                   ))}
@@ -160,15 +145,6 @@ export function DetailsProject({
               <div className="text-sm text-muted-foreground">
                 Projeto desenvolvido em {dates}
               </div>
-
-              {link && (
-                <Button asChild size="lg" className="w-full sm:w-auto">
-                  <a href={link} target="_blank" rel="noopener noreferrer">
-                    <ExternalLink className="w-4 h-4 mr-2" />
-                    Acessar Projeto Completo
-                  </a>
-                </Button>
-              )}
             </div>
           </div>
         </div>

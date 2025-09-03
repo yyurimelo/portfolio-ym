@@ -12,14 +12,15 @@ interface Props {
   resume?: string;
   dates: string;
   tags: readonly string[];
-  link?: string;
-  image?: string;
-  carousel?: string[];
-  wallpaper?: string;
-  video?: string;
-  video2?: string;
+  media: {
+    image: string | null;
+    video: string | null;
+    video2: string | null;
+    wallpaper: string | null;
+    carousel: string[] | null;
+  };
   links?: readonly {
-    icon: React.ReactNode;
+    icon: React.ReactNode | null;
     type: string;
     href: string;
   }[];
@@ -34,29 +35,24 @@ export function ProjectCard({
   resume,
   dates,
   tags,
-  link,
-  image,
-  carousel,
-  wallpaper,
-  video,
-  video2,
+  media,
   links,
   className,
   isOpen
 }: Props) {
-  const [open, setOpen] = useState(false)
+  const [open, setOpen] = useState(false);
 
   return (
     <>
       <Card
         className={
-          "flex flex-col overflow-hidden border hover:shadow-lg hover:bg-muted/10 transition-all duration-300 ease-out h-full bg-background"
+          "flex flex-col overflow-hidden border hover:shadow-lg hover:bg-muted/10 transition-all duration-300 ease-out h-full bg-background cursor-pointer"
         }
         onClick={() => setOpen(true)}
       >
-        {video && (
+        {media.video && (
           <video
-            src={video}
+            src={media.video}
             autoPlay
             loop
             muted
@@ -64,9 +60,9 @@ export function ProjectCard({
             className="pointer-events-none mx-auto h-40 w-full object-cover object-top"
           />
         )}
-        {image || wallpaper && (
+        {(media.image || media.wallpaper) && (
           <Image
-            src={wallpaper ? wallpaper : image!}
+            src={media.wallpaper || media.image!}
             alt={title}
             width={500}
             height={300}
@@ -78,7 +74,7 @@ export function ProjectCard({
             <CardTitle className="mt-1 text-base">{title}</CardTitle>
             <time className="font-sans text-xs">{dates}</time>
             <div className="hidden font-sans text-xs underline print:visible">
-              {link?.replace("https://", "").replace("www.", "").replace("/", "")}
+              {href?.replace("https://", "").replace("www.", "").replace("/", "")}
             </div>
             <p className="prose max-w-full text-pretty font-sans text-xs text-muted-foreground dark:prose-invert">
               {resume}
@@ -107,10 +103,13 @@ export function ProjectCard({
                 <Link href={link?.href} key={idx} target="_blank">
                   <Badge key={idx} className="flex gap-2 px-2 py-1 text-[10px] bg-secondary-foreground">
                     {link.icon}
-                    {link.type}
+                    {link.type === "Website" && (
+                      link.type
+                    )}
                   </Badge>
                 </Link>
               ))}
+
             </div>
           )}
         </CardFooter>
@@ -123,9 +122,13 @@ export function ProjectCard({
           title={title}
           description={description}
           dates={dates}
-          {...{ href, tags, link, image, video, video2, links, className, carousel, wallpaper }}
+          tags={tags}
+          href={href}
+          media={media}
+          links={links}
+          className={className}
         />
       )}
     </>
-  )
+  );
 }

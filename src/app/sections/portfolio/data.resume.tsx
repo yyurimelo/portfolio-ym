@@ -1,3 +1,4 @@
+import { LinkedInLogoIcon } from "@radix-ui/react-icons";
 import { Globe } from "lucide-react";
 
 export const DATA = {
@@ -38,12 +39,16 @@ Resultados esperados:
         {
           type: "Website",
           href: "https://agile.3code.com.br/",
-          icon: <Globe className="size-3" />,
+          icon: <Globe />,
         },
       ],
-      wallpaper: "",
-      video: "/agile-preview-cut.mp4",
-      video2: "/agile-preview.mp4"
+      media: {
+        image: null,
+        video: "/agile-preview-cut.mp4",
+        video2: "/agile-preview.mp4",
+        wallpaper: null,
+        carousel: null,
+      },
     },
     {
       title: "Documentação do Agile",
@@ -74,8 +79,13 @@ Resultados:
           icon: <Globe className="size-3" />,
         },
       ],
-      image: "",
-      video: "/agile-docs-preview.mp4",
+      media: {
+        image: null,
+        video: "/agile-docs-preview.mp4",
+        video2: null,
+        wallpaper: null,
+        carousel: null,
+      },
     },
     {
       title: "Landing page Agile",
@@ -113,8 +123,13 @@ Resultados:
           icon: <Globe className="size-3" />,
         },
       ],
-      video: "/landing-page-agile-preview.mp4",
-      video2: ""
+      media: {
+        image: null,
+        video: "/landing-page-agile-preview.mp4",
+        video2: null,
+        wallpaper: null,
+        carousel: null,
+      },
     },
     {
       title: "E-commerce Estudantil",
@@ -122,25 +137,39 @@ Resultados:
       dates: "Fev 2024 - Jan 2025",
       active: true,
       resume: "Plataforma de e-commerce para o Grêmio Estudantil.",
-      description: `Desenvolvimento de uma plataforma de e-commerce voltada para o Grêmio Estudantil, permitindo que estudantes comprem uniformes e produtos escolares de maneira digital e organizada.
+      description: `Projeto de TCC desenvolvido no CEFET com o objetivo de criar uma plataforma de e-commerce para o Grêmio Estudantil, permitindo que estudantes comprem uniformes e produtos escolares de maneira digital e organizada. O projeto surgiu como uma solução para substituir o processo totalmente manual, que era feito à mão e com planilhas, e também serviu como uma oportunidade de aprendizado prático em Next.js, framework que eu estava estudando no momento.
 
 Aspectos técnicos:
-- Front-end desenvolvido com Next.js e TailwindCSS para responsividade e usabilidade.
-- Back-end em NestJS com MongoDB, garantindo escalabilidade e confiabilidade.
-- Sistema de gerenciamento de pedidos, produtos e encomendas.
-- Implementação de funcionalidades de autenticação e controle de usuários.
+- Front-end desenvolvido com Next.js e TailwindCSS, garantindo responsividade, usabilidade e experiência intuitiva para os alunos.
+- Back-end implementado em NestJS com MongoDB, oferecendo escalabilidade, confiabilidade e gerenciamento robusto de dados.
+- Sistema completo de gerenciamento de pedidos, produtos e encomendas, facilitando o controle do Grêmio Estudantil.
+- Funcionalidades de autenticação e controle de usuários, garantindo segurança e organização.
+- Integração entre front-end e back-end para uma experiência fluida e confiável.
 
 Objetivos:
-- Digitalizar a venda de uniformes e produtos escolares.
-- Simplificar o processo de gerenciamento pelo Grêmio Estudantil.
-- Proporcionar experiência prática e intuitiva para os alunos.
+- Digitalizar a venda de uniformes e produtos escolares, substituindo métodos manuais.
+- Simplificar o processo de gestão do Grêmio Estudantil, tornando-o mais organizado e eficiente.
+- Proporcionar uma experiência prática e intuitiva para os alunos, incentivando o uso da plataforma.
 
 Resultados:
-- Plataforma ativa, utilizada por estudantes para realizar compras e encomendas de forma organizada e segura.`,
+- Plataforma ativa e em uso pelos estudantes da escola, que agora realizam suas compras e encomendas de forma segura e organizada.
+- Experiência prática significativa para meu desenvolvimento como desenvolvedor fullstack.
+- Consolidação de habilidades em Next.js, NestJS e MongoDB, com visão completa de um projeto de e-commerce real.`,
       technologies: ["React", "Next.js", "Javascript", "TailwindCSS", "MongoDB", "Nest.js"],
-      links: [],
-      image: "",
-      video: "/project-gremio-preview.mp4",
+      links: [
+        {
+          type: "LinkedIn",
+          href: "https://www.linkedin.com/posts/yyurimelo_para-concluir-meu-curso-no-cefet-e-finalmente-activity-7333888670950658048-TeNv?utm_source=social_share_send&utm_medium=member_desktop_web&rcm=ACoAAFd2HhYBH2JIxcWjOSWC_80nF8elcoqKbbQ",
+          icon: <LinkedInLogoIcon />,
+        },
+      ],
+      media: {
+        image: null,
+        video: "/project-gremio-preview.mp4",
+        video2: null,
+        wallpaper: null,
+        carousel: null,
+      },
     },
     {
       title: "MOBI",
@@ -172,16 +201,25 @@ Resultados:
         "Java Spring Boot",
         "OpenStreetMap API",
       ],
-      image: "",
-      carousel: [
-        "/mobi-sign-in.jpeg",
-        "/mobi-dashboard.jpeg",
-        "/mobi-form.jpeg",
-        "/mobi-router.jpeg",
+      links: [
+        {
+          type: "LinkedIn",
+          href: "https://www.linkedin.com/posts/yyurimelo_quero-compartilhar-com-voc%C3%AAs-um-dos-meus-activity-7354866599155187712-spBa?utm_source=share&utm_medium=member_desktop&rcm=ACoAAFd2HhYBH2JIxcWjOSWC_80nF8elcoqKbbQ",
+          icon: <LinkedInLogoIcon />,
+        },
       ],
-      wallpaper: "/mobi-wallpaper.jpeg",
-      video: "",
-      links: [],
+      media: {
+        image: null,
+        video: null,
+        video2: null,
+        wallpaper: "/mobi-wallpaper.jpeg",
+        carousel: [
+          "/mobi-sign-in.jpeg",
+          "/mobi-dashboard.jpeg",
+          "/mobi-form.jpeg",
+          "/mobi-router.jpeg",
+        ],
+      },
     },
   ],
 };

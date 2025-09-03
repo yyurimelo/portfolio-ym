@@ -1,25 +1,25 @@
-"use client"
+"use client";
 
-import { Section } from "@/components/ui/section"
-import { BlurFade } from "@/components/magicui/blur-fade"
-import { DATA } from "../sections/portfolio/data.resume"
-import { ProjectCard } from "../sections/portfolio/project-card"
-import { X } from "lucide-react"
-import { useRouter } from "next/navigation"
-import { Button } from "@/components/ui/button"
+import { Section } from "@/components/ui/section";
+import { BlurFade } from "@/components/magicui/blur-fade";
+import { DATA } from "../sections/portfolio/data.resume";
+import { ProjectCard } from "../sections/portfolio/project-card";
+import { X } from "lucide-react";
+import { useRouter } from "next/navigation";
+import { Button } from "@/components/ui/button";
 
-const BLUR_FADE_DELAY = 0.01
+const BLUR_FADE_DELAY = 0.01;
 
 export default function Showcase() {
-  const router = useRouter()
+  const router = useRouter();
 
   return (
     <Section className="relative overflow-hidden pb-0 sm:pb-0 md:pb-0">
       <Button
         variant={"ghost"}
         size={"icon"}
-        onClick={() => router.back()}
-        className="absolute top-4 right-6 p-2 rounded-full hover:bg-muted transition"
+        onClick={() => router.push("/#portfolio")}
+        className="absolute top-4 right-6 p-2 rounded-full hover:bg-muted transition cursor-pointer"
       >
         <X className="h-6 w-6" />
       </Button>
@@ -35,20 +35,16 @@ export default function Showcase() {
               key={project.title}
               title={project.title}
               description={project.description}
-              resume={project.resume ?? ""}
+              resume={project.resume}
               dates={project.dates}
               tags={project.technologies}
-              image={project.image}
-              carousel={project.carousel ?? []}
-              wallpaper={project.wallpaper}
-              video={project.video}
-              video2={project.video2}
-              links={project?.links ?? []}
+              media={project.media}
+              links={project.links}
               isOpen
             />
           </BlurFade>
         ))}
       </div>
     </Section>
-  )
+  );
 }
