@@ -3,7 +3,7 @@ import RotateSkills from "./routate-skills/page";
 
 export default function Skills() {
   return (
-    <Section>
+    <Section id="skills">
       <RotateSkills />
     </Section >
   )

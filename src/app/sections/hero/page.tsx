@@ -47,7 +47,7 @@ export default function Hero() {
   }, [resolvedTheme]);
 
   return (
-    <Section className="fade-bottom flex min-h-screen items-center justify-center relative ">
+    <Section id="start" className="flex min-h-screen items-center justify-center relative ">
       <Particles
         className="absolute inset-0 z-0"
         quantity={100}
