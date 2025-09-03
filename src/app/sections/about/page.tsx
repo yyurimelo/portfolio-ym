@@ -8,7 +8,7 @@ import { Section } from "@/components/ui/section";
 
 export default function About() {
   return (
-    <Section className="fade-bottom flex min-h-screen items-center justify-center relative border-primary bg-[url('/spiral-background.png')] lg:bg-contain bg-cover bg-no-repeat lg:bg-center">
+    <Section className="flex min-h-screen items-center justify-center relative border-primary bg-[url('/spiral-background.png')] lg:bg-contain bg-cover bg-no-repeat lg:bg-center">
       <div className="max-w-container mx-auto flex flex-col gap-12 pt-16 sm:gap-24">
         <div className="flex flex-col items-center gap-6 text-center sm:gap-12">
           <div className="absolute inset-0 -z-10">

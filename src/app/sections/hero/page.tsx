@@ -26,6 +26,7 @@ const slugs = [
   "tailwindcss",
   "mysql",
   "dotnet",
+  "nestjs"
 ];
 
 const images = slugs.map(
