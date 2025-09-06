@@ -5,9 +5,9 @@ import { Dispatch } from "react";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Separator } from "@/components/ui/separator";
-import { ExternalLink, Globe } from "lucide-react";
 import Link from "next/link";
-import { CarouselProject } from "../carousel-project";
+import { ProjectCardCarousel } from "./project-card-carousel";
+import Image from "next/image";
 
 
 type Props = {
@@ -33,7 +33,7 @@ type Props = {
   className?: string;
 };
 
-export function DetailsProject({
+export function ProjectCardDetails({
   open,
   setOpen,
   title,
@@ -94,7 +94,7 @@ export function DetailsProject({
                     />
                   ) : media.image ? (
                     <div className="relative">
-                      <img
+                      <Image
                         src={media.image}
                         alt={title}
                         className="w-full h-auto rounded-xl"
@@ -102,7 +102,7 @@ export function DetailsProject({
                     </div>
                   ) : media.carousel ? (
                     <div className="flex justify-center items-center">
-                      <CarouselProject carousel={media.carousel} />
+                      <ProjectCardCarousel carousel={media.carousel} />
                     </div>
                   ) : null}
                 </div>

@@ -13,7 +13,7 @@ type Props = {
   carousel: string[]
 }
 
-export function CarouselProject({ carousel }: Props) {
+export function ProjectCardCarousel({ carousel }: Props) {
   return (
     <Carousel className="w-full max-w-xs">
       <CarouselContent>

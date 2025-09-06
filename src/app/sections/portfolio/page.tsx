@@ -1,7 +1,7 @@
 "use client";
 
 import { Section } from "@/components/ui/section";
-import { ProjectCard } from "./project-card";
+import { ProjectCard } from "@/app/components/project-card";
 
 import { Button } from "@/components/ui/button";
 import { useRouter } from "next/navigation";

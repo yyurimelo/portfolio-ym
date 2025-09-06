@@ -3,8 +3,7 @@ import { Card, CardContent, CardFooter, CardHeader, CardTitle } from "@/componen
 import Link from "next/link";
 import Image from "next/image";
 import { useState } from "react";
-import { DetailsProject } from "./details";
-
+import { ProjectCardDetails } from "./project-card-details";
 
 interface Props {
   title: string;
@@ -117,7 +116,7 @@ export function ProjectCard({
       </Card>
 
       {isOpen && (
-        <DetailsProject
+        <ProjectCardDetails
           open={open}
           setOpen={setOpen}
           title={title}

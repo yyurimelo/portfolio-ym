@@ -3,11 +3,11 @@
 import { Section } from "@/components/ui/section";
 import { BlurFade } from "@/components/magicui/blur-fade";
 
-import { ProjectCard } from "../sections/portfolio/project-card";
 import { X } from "lucide-react";
 import { useRouter } from "next/navigation";
 import { Button } from "@/components/ui/button";
 import { DATA } from "../sections/portfolio/DATA";
+import { ProjectCard } from "../components/project-card";
 
 const BLUR_FADE_DELAY = 0.01;
 
