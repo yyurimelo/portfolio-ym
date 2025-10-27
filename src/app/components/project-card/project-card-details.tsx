@@ -124,14 +124,16 @@ export function ProjectCardDetails({
             {/* Links externos */}
             {links && links.length > 0 && (
               <div className="mb-8">
-                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3">
+                <div className="flex flex-col sm:flex-row sm:flex-wrap gap-2">
                   {links.map((l, index) => (
                     <Link href={l.href} key={index} target="_blank">
                       <Button
                         variant={"secondary"}
-                        className="flex gap-2 px-2 py-1 bg-secondary-foreground hover:bg-secondary-foreground/80 text-secondary cursor-pointer"
+                        className="flex items-center justify-center gap-2 px-3 py-2 h-9 bg-secondary-foreground hover:bg-secondary-foreground/80 text-secondary cursor-pointer"
                       >
-                        {l.icon}
+                        <span className="flex items-center justify-center w-4 h-4">
+                          {l.icon}
+                        </span>
                         {l.type}
                       </Button>
                     </Link>

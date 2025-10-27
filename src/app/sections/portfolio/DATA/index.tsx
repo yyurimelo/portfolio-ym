@@ -4,6 +4,57 @@ import { Globe } from "lucide-react";
 export const DATA = {
   projects: [
     {
+      title: "iPrazos - Site",
+      href: "https://www.iprazos.adv.br/",
+      dates: "Ago 2025 - Out 2025",
+      active: true,
+      resume: "Desenvolvimento do site oficial do iPrazos, uma plataforma jurídica focada em automação e simplificação de prazos processuais.",
+      description: `O projeto consistiu na criação do site institucional do iPrazos — uma plataforma jurídica que automatiza e simplifica o controle de prazos processuais. 
+O foco foi entregar uma experiência fluida, moderna e totalmente otimizada para captação de leads e apresentação do produto.
+
+Aspectos técnicos:
+- Construído com Next.js, utilizando Server Actions para integração server-side com a API.
+- Captação de leads diretamente pelo site, com formulários validados via React Hook Form e Zod.
+- Estilização feita com Tailwind CSS e shadcn/ui, garantindo uma interface moderna e consistente.
+- Componentes reutilizáveis e bem estruturados, focando em escalabilidade e manutenção.
+- Responsividade total, oferecendo uma navegação fluida em qualquer dispositivo.
+- Manipulação otimizada de SVGs e uso do Next Image para performance visual.
+
+Colaborações:
+- Ideias de design desenvolvidas em conjunto com @paulodsz_, utilizando Figma para prototipação e refinamento visual.
+
+Resultados:
+- Site leve, performático e com foco em conversão, reforçando a identidade visual e a presença digital do iPrazos.`,
+      technologies: [
+        "Next.js",
+        "React Hook Form",
+        "Zod",
+        "TailwindCSS",
+        "shadcn/ui",
+        "Server Actions",
+      ],
+      links: [
+        {
+          type: "Website",
+          href: "https://www.iprazos.adv.br/",
+          icon: <Globe />,
+        },
+        {
+          type: "LinkedIn",
+          href: "https://www.linkedin.com/posts/yyurimelo_nextjs-tailwind-frontend-activity-7388587623952502784-0Vo2?utm_source=social_share_send&utm_medium=member_desktop_web&rcm=ACoAAFd2HhYBH2JIxcWjOSWC_80nF8elcoqKbbQ",
+          icon: <LinkedInLogoIcon />,
+        },
+      ],
+      media: {
+        image: null,
+        video: "/iprazos-site-video.mp4",
+        video2: "/iprazos-site-video.mp4",
+        wallpaper: null,
+        carousel: null,
+      },
+    },
+
+    {
       title: "Agile - Dashboard",
       href: "https://agile.3code.com.br/",
       dates: "Jan 2025 - Atual",

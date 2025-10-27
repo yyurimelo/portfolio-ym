@@ -98,11 +98,13 @@ export function ProjectCard({
         </CardContent>
         <CardFooter className="px-2 pb-2">
           {links && links.length > 0 && (
-            <div className="flex flex-row flex-wrap items-start gap-1">
+            <div className="flex flex-wrap gap-1">
               {links?.map((link, idx) => (
                 <Link href={link?.href} key={idx} target="_blank">
-                  <Badge key={idx} className="flex gap-2 px-2 py-1 text-[10px] bg-secondary-foreground">
-                    {link.icon}
+                  <Badge key={idx} className="flex items-center gap-1 px-2 py-1 text-[10px] bg-secondary-foreground h-6">
+                    <span className="flex items-center justify-center w-3 h-3">
+                      {link.icon}
+                    </span>
                     {link.type === "Website" && (
                       link.type
                     )}
