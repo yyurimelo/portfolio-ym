@@ -1,9 +1,12 @@
+"use client";
+
 import { Badge } from "@/components/ui/badge";
 import { Card, CardContent, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
 import Link from "next/link";
 import Image from "next/image";
 import { useState } from "react";
 import { ProjectCardDetails } from "./project-card-details";
+import { OptimizedVideo } from "./optimized-video";
 
 interface Props {
   title: string;
@@ -51,13 +54,10 @@ export function ProjectCard({
         onClick={() => setOpen(true)}
       >
         {media.video && (
-          <video
+          <OptimizedVideo
             src={media.video}
-            autoPlay
-            loop
-            muted
-            playsInline
-            className="pointer-events-none mx-auto h-40 w-full object-cover object-top"
+            mode="hover"
+            className="mx-auto h-40 w-full object-cover object-top"
           />
         )}
         {(media.image || media.wallpaper) && (

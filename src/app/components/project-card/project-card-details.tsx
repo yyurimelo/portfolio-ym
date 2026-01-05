@@ -7,6 +7,7 @@ import { Button } from "@/components/ui/button";
 import { Separator } from "@/components/ui/separator";
 import Link from "next/link";
 import { ProjectCardCarousel } from "./project-card-carousel";
+import { OptimizedVideo } from "./optimized-video";
 import Image from "next/image";
 
 
@@ -85,11 +86,10 @@ export function ProjectCardDetails({
               <div className="mb-8">
                 <div className="rounded-xl overflow-hidden shadow-lg border">
                   {media.video || media.video2 ? (
-                    <video
+                    <OptimizedVideo
                       src={media.video2 || media.video!}
-                      controls
-                      autoPlay
-                      loop
+                      mode="autoplay"
+                      showControls={true}
                       className="w-full h-auto max-h-[80vh] rounded-xl"
                     />
                   ) : media.image ? (
