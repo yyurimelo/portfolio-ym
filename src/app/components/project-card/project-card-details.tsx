@@ -88,7 +88,6 @@ export function ProjectCardDetails({
                   {media.video || media.video2 ? (
                     <OptimizedVideo
                       src={media.video2 || media.video!}
-                      mode="autoplay"
                       showControls={true}
                       className="w-full h-auto max-h-[80vh] rounded-xl"
                     />
