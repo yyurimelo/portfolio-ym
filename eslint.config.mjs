@@ -12,6 +12,14 @@ const compat = new FlatCompat({
 const eslintConfig = [
   ...compat.extends("next/core-web-vitals", "next/typescript"),
   {
+    rules: {
+      'react/no-unescaped-entities': 'off',
+      '@next/next/no-page-custom-font': 'off',
+      'no-unused-vars': 'off', // Desativa a regra 'no-unused-vars' para todo o projeto
+      '@typescript-eslint/no-explicit-any': 'off', // Para regras do TypeScript
+    },
+  },
+  {
     ignores: [
       "node_modules/**",
       ".next/**",

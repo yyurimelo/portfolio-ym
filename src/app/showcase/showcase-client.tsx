@@ -1,7 +1,6 @@
 // app/showcase/showcase-client.tsx
 "use client";
 
-import { BlurFade } from "@/components/magicui/blur-fade";
 import { X } from "lucide-react";
 import { useRouter } from "next/navigation";
 import { Button } from "@/components/ui/button";

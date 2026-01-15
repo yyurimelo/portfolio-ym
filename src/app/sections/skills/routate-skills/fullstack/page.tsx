@@ -2,13 +2,10 @@
 
 import { AuroraText } from "@/components/magicui/aurora-text";
 import { CardsFullstack } from "./cards-fullstack";
-import { useIsMobile } from "@/app/hooks/use-mobile";
 
 import { motion } from "motion/react";
 
 export default function FullStackSkills() {
-  const isMobile = useIsMobile();
-
   return (
     <motion.div
       initial={{ x: -100, opacity: 0 }}

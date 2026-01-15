@@ -41,7 +41,6 @@ export function ProjectCardDetails({
   description,
   dates,
   tags,
-  href,
   media,
   links,
 }: Props) {
