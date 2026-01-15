@@ -56,7 +56,6 @@ export function ProjectCard({
         {media.video && (
           <OptimizedVideo
             src={media.video}
-            mode="hover"
             className="mx-auto h-40 w-full object-cover object-top"
           />
         )}
