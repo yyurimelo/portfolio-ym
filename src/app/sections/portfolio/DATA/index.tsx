@@ -1,8 +1,99 @@
-import { LinkedInLogoIcon } from "@radix-ui/react-icons";
+import { GitHubLogoIcon, LinkedInLogoIcon } from "@radix-ui/react-icons";
 import { Globe } from "lucide-react";
 
 export const DATA = {
   projects: [
+    {
+      title: "Lyra Chat",
+      href: "https://lyra-chat-five.vercel.app/",
+      dates: "2025",
+      active: true,
+      resume: "Aplicação de chat em tempo real entre amigos, desenvolvida fullstack do zero com C# e React.",
+      description: `Lyra Chat é um projeto pessoal desenvolvido com o objetivo de consolidar meus conhecimentos como desenvolvedor fullstack, unindo aprendizados do mercado de trabalho com estudos independentes ao longo de 2025.
+
+Mesmo já atuando profissionalmente como fullstack, este foi meu primeiro projeto fullstack em C# construído completamente do zero — do backend ao deploy em produção. Finalizar o MVP e colocá-lo no ar foi uma grande conquista pessoal e técnica.
+
+Aspectos técnicos — Front-end:
+- Aplicação desenvolvida com React e Vite, utilizando TypeScript.
+- Estilização com Tailwind CSS e ShadCN UI, garantindo consistência visual e ótima experiência do usuário.
+- Suporte a múltiplos idiomas (i18n).
+- Arquitetura organizada com hooks personalizados, Auth Context e Session Components.
+- Validação de formulários com Zod.
+- Gerenciamento de estado e dados assíncronos com React Query (TanStack Query), incluindo Infinite Query.
+- Roteamento com TanStack Router.
+- Integração completa com o backend.
+- Comunicação em tempo real via SignalR.
+- Interface totalmente responsiva, com personalização de tema, troca de cores e paginação integrada ao backend.
+
+Aspectos técnicos — Back-end:
+- Backend desenvolvido em .NET 8.0 com C#.
+- Arquitetura baseada em DDD (Domain Driven Design).
+- Comunicação em tempo real com SignalR.
+- Entity Framework para acesso a dados.
+- Integração com Supabase para armazenamento de imagens e arquivos.
+- Banco de dados PostgreSQL utilizando Neon.
+
+Autenticação:
+- Login com Google OAuth 2.0.
+- Autenticação por credenciais.
+- Usuários com múltiplos providers vinculados.
+
+DevOps & Deploy:
+- Front-end hospedado na Vercel.
+- Back-end hospedado na Railway.
+- Configuração completa de ambientes, variáveis e integrações em produção.
+
+Colaborações:
+- Identidade visual e logo desenvolvidas por Paulo Vinicius Leonardo de Souza, elevando significativamente a qualidade visual do projeto.
+
+Resultados:
+- MVP finalizado e publicado em produção.
+- Projeto completo, funcional e escalável, cobrindo front-end, back-end, autenticação, tempo real e deploy.
+- Consolidação prática de conhecimentos em React, .NET, SignalR e arquitetura fullstack.`,
+      technologies: [
+        "React",
+        "Vite",
+        "TypeScript",
+        "TailwindCSS",
+        "ShadCN UI",
+        "Zod",
+        "TanStack Query",
+        "TanStack Router",
+        "SignalR",
+        "C#",
+        ".NET 8",
+        "Entity Framework",
+        "PostgreSQL",
+        "Supabase",
+        "Google OAuth",
+        "Vercel",
+        "Railway",
+      ],
+      links: [
+        {
+          type: "Website",
+          href: "https://lyra-chat-five.vercel.app/",
+          icon: <Globe />,
+        },
+        {
+          type: "Github",
+          href: "https://github.com/yyurimelo/LyraWeb",
+          icon: <GitHubLogoIcon />,
+        },
+        {
+          type: "LinkedIn",
+          href: "https://www.linkedin.com/posts/yyurimelo_fullstack-dotnet-react-activity-7419048473020424192-anjg?utm_source=social_share_send&utm_medium=member_desktop_web&rcm=ACoAAFd2HhYBH2JIxcWjOSWC_80nF8elcoqKbbQ",
+          icon: <LinkedInLogoIcon />,
+        },
+      ],
+      media: {
+        image: null,
+        video: "/Lyra-Chat-Flow-Preview.mp4",
+        video2: null,
+        wallpaper: null,
+        carousel: null,
+      },
+    },
     {
       title: "iPrazos - Site",
       href: "https://www.iprazos.adv.br/",
