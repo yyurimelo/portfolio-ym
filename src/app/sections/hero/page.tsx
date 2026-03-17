@@ -12,7 +12,9 @@ import Me from "./me/page";
 import {
   FaHtml5,
   FaReact,
-  FaGithub
+  FaGithub,
+  FaJava,
+  FaNodeJs
 } from "react-icons/fa";
 import { IoLogoCss3 } from "react-icons/io";
 import { IoLogoJavascript } from "react-icons/io5";
@@ -23,8 +25,10 @@ import {
   SiMysql,
   SiDotnet,
   SiNestjs,
+  SiSpringboot,
+  SiExpress,
   SiAndroidstudio,
-  SiTypescript 
+  SiTypescript
 } from "react-icons/si";
 import { FaFigma } from "react-icons/fa6";
 
@@ -43,7 +47,11 @@ const icons = [
   { component: <SiTailwindcss className="text-[#06B6D4] dark:text-white size-7" /> },
   { component: <SiMysql className="text-[#4479A1] dark:text-white size-7" /> },
   { component: <SiDotnet className="text-[#512BD4] dark:text-white size-7" /> },
+  { component: <FaNodeJs className="text-[#5FA04E] dark:text-white size-7" /> },
   { component: <SiNestjs className="text-[#E0234E] dark:text-white size-7" /> },
+  { component: <FaJava className="text-[#E0234E] dark:text-white size-7" /> },
+  { component: <SiSpringboot className="text-[#6DB33F] dark:text-white size-7" /> },
+  { component: <SiExpress className="dark:text-white size-7" /> },
 ];
 
 export default function Hero() {
@@ -102,9 +110,9 @@ export default function Hero() {
               </BoxReveal>
 
               <BoxReveal boxColor={"#ab0fff"} duration={0.5}>
-                <div className="flex  items-center mt-[1.6rem] gap-2">
+                <div className="flex items-center mt-[1.6rem] gap-2 h-9">
                   <ContactButton />
-                  <Button asChild className="rounded-full " variant="outline">
+                  <Button asChild className="rounded-full h-full" variant="outline">
                     <a href="Yuri_Melo_dos_Santos.pdf" download>
                       Download CV
                     </a>

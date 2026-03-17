@@ -44,22 +44,22 @@ export function ContactButton() {
           <Separator />
           <div className="flex gap-2 justify-between items-center">
             <LinkedInLogoIcon className="size-5" />
-            <a href="https://www.linkedin.com/in/yyurimelo/">yyurimelo</a>
+            <a href="https://www.linkedin.com/in/yyurimelo/" className="underline">yyurimelo</a>
           </div>
           <Separator />
           <div className="flex gap-2 justify-between items-center">
             <GitHubLogoIcon className="size-5" />
-            <a href="https://github.com/yyurimelo">yyurimelo</a>
+            <a href="https://github.com/yyurimelo" className="underline">yyurimelo</a>
           </div>
           <Separator />
           <div className="flex gap-2 justify-between items-center">
             <InstagramLogoIcon className="size-5" />
-            <a href="https://www.instagram.com/yyurimelo/">@yyurimelo</a>
+            <a href="https://www.instagram.com/yyurimelo/" className="underline">@yyurimelo</a>
           </div>
           <Separator />
           <div className="flex gap-2 justify-between items-center">
             <Phone className="size-5" />
-            <a href="https://wa.me/5521976676575?text=Ol%C3%A1%20Yuri%2C%20tudo%20bem%3F%20Encontrei%20seu%20portf%C3%B3lio%20e%20gostaria%20de%20conversar%20sobre%20oportunidades%20ou%20colabora%C3%A7%C3%B5es%20profissionais." target="_blank">
+            <a href="https://wa.me/5521976676575?text=Ol%C3%A1%20Yuri%2C%20tudo%20bem%3F%20Encontrei%20seu%20portf%C3%B3lio%20e%20gostaria%20de%20conversar%20sobre%20oportunidades%20ou%20colabora%C3%A7%C3%B5es%20profissionais." target="_blank" className="underline">
               +55 (21) 97667-6575
             </a>
           </div>
