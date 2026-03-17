@@ -11,7 +11,7 @@ import FullStackSkills from "./fullstack/page";
 
 export default function RotateSkills() {
   return (
-    <div className="flex justify-center items-center w-full min-h-100vh ">
+    <div className="flex justify-center items-center w-full min-h-100vh">
       <Swiper
         spaceBetween={20}
         slidesPerView={1}
