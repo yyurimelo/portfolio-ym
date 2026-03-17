@@ -6,7 +6,7 @@ import { motion } from "motion/react";
 
 export interface SkillsSectionProps {
   title: string;
-  description: string;
+  description: React.ReactNode;
   icons: Array<{ icon: React.ReactNode }>;
   withAnimation?: boolean;
   showSwipeHint?: boolean;
