@@ -87,7 +87,7 @@ export default function Hero() {
               <BoxReveal boxColor={"#ab0fff"} duration={0.5}>
                 <div className="md:flex flex md:items-center text-left text-xs md:text-[1rem]">
                   <h2>
-                    {"<"}Desenvolvedor Full stack{" "}
+                    {"<"}Desenvolvedor full-stack{" "}
                     <span className="text-primary"> | UX DESIGNER {"/>"}</span>
                   </h2>
                 </div>
@@ -97,7 +97,7 @@ export default function Hero() {
                 <div className="mt-2 text-xs md:text-[1rem]">
                   <p className="text-left">
                     Olá, me chamo Yuri Melo, tenho {age} anos e atualmente trabalho
-                    como Full stack. <br />
+                    como full-stack. <br />
                   </p>
                   <div className="flex flex-wrap gap-2 text-[0.9rem] mt-2 items-center">
                     {icons.map((icon, index) => (

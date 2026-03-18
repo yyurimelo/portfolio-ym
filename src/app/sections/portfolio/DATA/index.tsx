@@ -8,10 +8,10 @@ export const DATA = {
       href: "https://lyra-chat-five.vercel.app/",
       dates: "2025",
       active: true,
-      resume: "Aplicação de chat em tempo real entre amigos, desenvolvida full stack do zero com C# e React.",
-      description: `Lyra Chat é um projeto pessoal desenvolvido com o objetivo de consolidar meus conhecimentos como desenvolvedor full stack, unindo aprendizados do mercado de trabalho com estudos independentes ao longo de 2025.
+      resume: "Aplicação de chat em tempo real entre amigos, desenvolvida full-stack do zero com C# e React.",
+      description: `Lyra Chat é um projeto pessoal desenvolvido com o objetivo de consolidar meus conhecimentos como desenvolvedor full-stack, unindo aprendizados do mercado de trabalho com estudos independentes ao longo de 2025.
 
-Mesmo já atuando profissionalmente como full stack, este foi meu primeiro projeto full stack em C# construído completamente do zero — do backend ao deploy em produção. Finalizar o MVP e colocá-lo no ar foi uma grande conquista pessoal e técnica.
+Mesmo já atuando profissionalmente como full-stack, este foi meu primeiro projeto full-stack em C# construído completamente do zero — do backend ao deploy em produção. Finalizar o MVP e colocá-lo no ar foi uma grande conquista pessoal e técnica.
 
 Aspectos técnicos — Front-end:
 - Aplicação desenvolvida com React e Vite, utilizando TypeScript.
@@ -49,7 +49,7 @@ Colaborações:
 Resultados:
 - MVP finalizado e publicado em produção.
 - Projeto completo, funcional e escalável, cobrindo front-end, back-end, autenticação, tempo real e deploy.
-- Consolidação prática de conhecimentos em React, .NET, SignalR e arquitetura full stack.`,
+- Consolidação prática de conhecimentos em React, .NET, SignalR e arquitetura full-stack.`,
       technologies: [
         "React",
         "Vite",
@@ -82,7 +82,7 @@ Resultados:
         },
         {
           type: "LinkedIn",
-          href: "https://www.linkedin.com/posts/yyurimelo_full stack-dotnet-react-activity-7419048473020424192-anjg?utm_source=social_share_send&utm_medium=member_desktop_web&rcm=ACoAAFd2HhYBH2JIxcWjOSWC_80nF8elcoqKbbQ",
+          href: "https://www.linkedin.com/posts/yyurimelo_full-stack-dotnet-react-activity-7419048473020424192-anjg?utm_source=social_share_send&utm_medium=member_desktop_web&rcm=ACoAAFd2HhYBH2JIxcWjOSWC_80nF8elcoqKbbQ",
           icon: <LinkedInLogoIcon />,
         },
       ],
@@ -295,7 +295,7 @@ Objetivos:
 
 Resultados:
 - Plataforma ativa e em uso pelos estudantes da escola, que agora realizam suas compras e encomendas de forma segura e organizada.
-- Experiência prática significativa para meu desenvolvimento como desenvolvedor full stack.
+- Experiência prática significativa para meu desenvolvimento como desenvolvedor full-stack.
 - Consolidação de habilidades em Next.js, NestJS e MongoDB, com visão completa de um projeto de e-commerce real.`,
       technologies: ["React", "Next.js", "Javascript", "TailwindCSS", "MongoDB", "Nest.js"],
       links: [

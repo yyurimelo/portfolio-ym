@@ -79,10 +79,10 @@ export const skillsData = {
     ] as SkillIcon[]
   },
   fullstack: {
-    title: "FULL STACK",
+    title: "FULL-STACK",
     description: (
       <>
-        Atuo como desenvolvedor full stack, cobrindo todo o ciclo de uma aplicação — da interface ao servidor, do banco de dados ao deploy em produção. <br /> <br />No front-end, trabalho com React, Next.js, TypeScript, Tailwind CSS e ShadCN/UI, construindo interfaces responsivas, performáticas e com foco em experiência do usuário. No back-end, desenvolvo APIs robustas com Node.js, NestJS, C# .NET e Java Spring Boot, integradas a bancos de dados relacionais e não relacionais como PostgreSQL e MongoDB. <br /> <br />Minha stack me permite construir aplicações completas com foco em escalabilidade, arquitetura limpa, boas práticas e entrega de valor real — do zero ao deploy.
+        Atuo como desenvolvedor full-stack, cobrindo todo o ciclo de uma aplicação — da interface ao servidor, do banco de dados ao deploy em produção. <br /> <br />No front-end, trabalho com React, Next.js, TypeScript, Tailwind CSS e ShadCN/UI, construindo interfaces responsivas, performáticas e com foco em experiência do usuário. No back-end, desenvolvo APIs robustas com Node.js, NestJS, C# .NET e Java Spring Boot, integradas a bancos de dados relacionais e não relacionais como PostgreSQL e MongoDB. <br /> <br />Minha stack me permite construir aplicações completas com foco em escalabilidade, arquitetura limpa, boas práticas e entrega de valor real — do zero ao deploy.
       </>
     ),
     icons: [
