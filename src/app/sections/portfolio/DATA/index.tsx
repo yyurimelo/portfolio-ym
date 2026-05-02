@@ -148,7 +148,7 @@ Resultados:
     {
       title: "Agile - Dashboard",
       href: "https://agile.3code.com.br/",
-      dates: "Jan 2025 - Atual",
+      dates: "Jan 2025 - Abril 2026",
       active: true,
       resume: "Atualmente desenvolvendo o sistema de tickets da plataforma Agile da 3Code.",
       description: `Projeto em andamento no desenvolvimento do sistema de tickets da plataforma Agile, uma ferramenta inteligente de gerenciamento de tarefas da 3Code. O foco principal é otimizar processos internos, melhorar a eficiência operacional da equipe e garantir que todas as tarefas sejam acompanhadas de forma precisa.
