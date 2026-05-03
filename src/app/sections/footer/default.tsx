@@ -49,26 +49,26 @@ export default function FooterSection({
       ],
     },
   ],
-  copyright = "© Yuri Melo 2025 - Todos os direitos reservados.",
-  socialLinks = [
-    {
-      label: "Instagram",
-      href: "https://www.instagram.com/yyurimelo/",
-      icon: <InstagramLogoIcon className="h-5 w-5" />,
-    },
-    {
-      label: "LinkedIn",
-      href: "https://www.linkedin.com/in/yyurimelo/",
-      icon: <LinkedInLogoIcon className="h-5 w-5" />,
-    },
-    {
-      label: "GitHub",
-      href: "https://github.com/yyurimelo/portfolio-ym",
-      icon: <GitHubLogoIcon className="h-5 w-5" />,
-    },
-  ],
-  showModeToggle = true,
-  className,
+  copyright = `© Yuri Melo ${new Date().getFullYear()} - Todos os direitos reservados.`,
+    socialLinks = [
+      {
+        label: "Instagram",
+        href: "https://www.instagram.com/yyurimelo/",
+        icon: <InstagramLogoIcon className="h-5 w-5" />,
+      },
+      {
+        label: "LinkedIn",
+        href: "https://www.linkedin.com/in/yyurimelo/",
+        icon: <LinkedInLogoIcon className="h-5 w-5" />,
+      },
+      {
+        label: "GitHub",
+        href: "https://github.com/yyurimelo/portfolio-ym",
+        icon: <GitHubLogoIcon className="h-5 w-5" />,
+      },
+    ],
+    showModeToggle = true,
+    className,
 }: FooterProps) {
   const handleScrollTo = (id: string) => {
     const element = document.getElementById(id);
@@ -76,6 +76,8 @@ export default function FooterSection({
       element.scrollIntoView({ behavior: "smooth" });
     }
   };
+
+
 
   return (
     <footer
