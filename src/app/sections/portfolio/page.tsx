@@ -33,6 +33,7 @@ export default function Portfolio() {
               tags={project.technologies}
               media={project.media}
               links={project.links}
+              isOpen
             />
           ))}
         </div>

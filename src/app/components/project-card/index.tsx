@@ -4,9 +4,10 @@ import { Badge } from "@/components/ui/badge";
 import { Card, CardContent, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
 import Link from "next/link";
 import Image from "next/image";
-import { useState } from "react";
+import { useRef, useState } from "react";
+import type { KeyboardEvent, MouseEvent } from "react";
 import { ProjectCardDetails } from "./project-card-details";
-import { OptimizedVideo } from "./optimized-video";
+import { cn } from "@/lib/utils";
 
 interface Props {
   title: string;
@@ -44,30 +45,41 @@ export function ProjectCard({
   isOpen
 }: Props) {
   const [open, setOpen] = useState(false);
+  const canOpenDetails = Boolean(isOpen);
+
+  const openDetails = () => {
+    if (!canOpenDetails) return;
+    setOpen(true);
+  };
+
+  const handleKeyDown = (event: KeyboardEvent<HTMLDivElement>) => {
+    const target = event.target as HTMLElement;
+    if (target.closest("a")) return;
+    if (event.key !== "Enter" && event.key !== " ") return;
+    event.preventDefault();
+    openDetails();
+  };
+
+  const stopCardClick = (event: MouseEvent<HTMLAnchorElement>) => {
+    event.stopPropagation();
+  };
 
   return (
     <>
       <Card
-        className={
-          "flex flex-col overflow-hidden border hover:shadow-lg hover:bg-muted/10 transition-all duration-300 ease-out h-full bg-background cursor-pointer"
-        }
-        onClick={() => setOpen(true)}
+        className={cn(
+          "flex h-full flex-col overflow-hidden border bg-background transition-all duration-300 ease-out hover:bg-muted/10 hover:shadow-lg focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:outline-none",
+          canOpenDetails && "cursor-pointer",
+          className
+        )}
+        onClick={openDetails}
+        onKeyDown={handleKeyDown}
+        role={canOpenDetails ? "button" : undefined}
+        aria-label={canOpenDetails ? `Abrir detalhes do projeto ${title}` : undefined}
+        tabIndex={canOpenDetails ? 0 : undefined}
       >
-        {media.video && (
-          <OptimizedVideo
-            src={media.video}
-            className="mx-auto h-40 w-full object-cover object-top"
-          />
-        )}
-        {(media.image || media.wallpaper) && (
-          <Image
-            src={media.wallpaper || media.image!}
-            alt={title}
-            width={500}
-            height={300}
-            className="h-40 w-full overflow-hidden object-cover object-top"
-          />
-        )}
+        <ProjectCardPreview title={title} media={media} />
+
         <CardHeader className="px-2">
           <div className="space-y-1">
             <CardTitle className="mt-1 text-base">{title}</CardTitle>
@@ -99,7 +111,7 @@ export function ProjectCard({
           {links && links.length > 0 && (
             <div className="flex flex-wrap gap-1">
               {links?.map((link, idx) => (
-                <Link href={link?.href} key={idx} target="_blank">
+                <Link href={link?.href} key={idx} target="_blank" onClick={stopCardClick}>
                   <Badge key={idx} className="flex items-center gap-1 px-2 py-1 text-[10px] bg-secondary-foreground h-6">
                     <span className="flex items-center justify-center w-3 h-3">
                       {link.icon}
@@ -131,5 +143,86 @@ export function ProjectCard({
         />
       )}
     </>
+  );
+}
+
+function ProjectCardPreview({
+  title,
+  media,
+}: {
+  title: string;
+  media: Props["media"];
+}) {
+  const videoRef = useRef<HTMLVideoElement>(null);
+  const [isPreviewing, setIsPreviewing] = useState(false);
+  const [videoUnavailable, setVideoUnavailable] = useState(false);
+
+  const fallbackImage = media.wallpaper || media.image || media.carousel?.[0] || null;
+  const hasVideo = Boolean(media.video && !videoUnavailable);
+
+  const playPreview = () => {
+    const video = videoRef.current;
+    if (!video || !window.matchMedia("(hover: hover) and (pointer: fine)").matches) return;
+
+    setIsPreviewing(true);
+    video.play().catch(() => {
+      setIsPreviewing(false);
+    });
+  };
+
+  const stopPreview = () => {
+    const video = videoRef.current;
+    if (!video) return;
+
+    video.pause();
+    video.currentTime = 0;
+    setIsPreviewing(false);
+  };
+
+  if (!fallbackImage && !hasVideo) {
+    return (
+      <div className="flex h-40 w-full items-center justify-center bg-muted text-xs text-muted-foreground">
+        Prévia indisponível
+      </div>
+    );
+  }
+
+  return (
+    <div
+      className="group relative h-40 w-full overflow-hidden bg-muted"
+      onMouseEnter={playPreview}
+      onMouseLeave={stopPreview}
+    >
+      {fallbackImage && (
+        <Image
+          src={fallbackImage}
+          alt={title}
+          width={700}
+          height={420}
+          className="h-full w-full object-cover object-top transition duration-500 group-hover:scale-[1.02]"
+        />
+      )}
+
+      {hasVideo && (
+        <video
+          ref={videoRef}
+          src={media.video!}
+          className={cn(
+            "h-full w-full object-cover object-top",
+            fallbackImage && "absolute inset-0 transition-opacity duration-300",
+            fallbackImage && (isPreviewing ? "opacity-100" : "opacity-0")
+          )}
+          preload="metadata"
+          muted
+          loop
+          playsInline
+          onError={() => setVideoUnavailable(true)}
+        />
+      )}
+
+      {fallbackImage && hasVideo && (
+        <div className="pointer-events-none absolute inset-x-0 bottom-0 h-14 bg-linear-to-t from-black/75 to-transparent opacity-90" />
+      )}
+    </div>
   );
 }
