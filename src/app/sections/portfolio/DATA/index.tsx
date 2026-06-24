@@ -4,6 +4,99 @@ import { Globe } from "lucide-react";
 export const DATA = {
   projects: [
     {
+      title: "Flow",
+      href: "https://github.com/yyurimelo/flow",
+      dates: "Mai - Jun 2026",
+      active: true,
+      resume: "Sistema de notificações em tempo real com pipeline assíncrono real: HTTP → RabbitMQ → Redis Pub/Sub → Socket.IO → cliente.",
+      description: `Desenvolvi o Flow para estudar sistemas distribuídos na prática. Muitas vezes estudamos conceitos como filas, mensageria, workers e comunicação em tempo real apenas pela teoria — o Flow foi o ambiente onde entendi como tudo isso funciona de verdade.
+
+O objetivo não era apenas criar uma aplicação funcional, mas construir um sistema onde eu pudesse experimentar arquiteturas utilizadas em produtos modernos e entender como essas tecnologias se conectam na prática.
+
+Pipeline de notificações — como funciona:
+O frontend envia uma ação para a API. A API, desenvolvida com Express e TypeScript, não processa diretamente a notificação — publica uma mensagem em uma fila do RabbitMQ, desacoplando produtor e consumidor. Um Worker especializado, executando em container Docker separado, consome essa fila e executa o processamento. Após isso, publica um evento via Redis Pub/Sub. O servidor WebSocket está inscrito nesses eventos e distribui as notificações para os clientes conectados. No frontend, os eventos recebidos são aplicados diretamente no cache do TanStack Query, atualizando a interface instantaneamente sem novas requisições.
+
+Aspectos técnicos — Front-end:
+- Aplicação desenvolvida com React 19 e Vite, utilizando TypeScript.
+- Estilização com Tailwind CSS 4 e ShadCN UI, com suporte a tema claro e escuro.
+- Roteamento file-based com TanStack Router.
+- Gerenciamento de dados assíncronos com TanStack Query, com atualização de cache em tempo real via WebSocket — sem chamadas extras ao backend após o carregamento inicial.
+- Comunicação em tempo real via Socket.IO: novas notificações aparecem no sino e no histórico instantaneamente.
+- Validação de formulários com Zod, compartilhado com o backend via pacote interno @flow/shared.
+- Arquitetura organizada por features, com hooks personalizados, interceptors Axios e Auth Provider.
+- Conteúdo rich-text com sanitização de HTML.
+
+Aspectos técnicos — Back-end:
+- API desenvolvida com Express 5 e TypeScript, organizada em camadas: rotas → serviços → repositórios → Prisma.
+- Pipeline de notificações assíncrono: API publica no RabbitMQ, worker consome e publica no Redis Pub/Sub, servidor entrega via Socket.IO.
+- Socket.IO com Redis Adapter para suporte a múltiplas instâncias.
+- MongoDB como banco de dados, acessado via Prisma ORM.
+- Schemas e tipos TypeScript compartilhados entre backend e frontend via pacote interno (@flow/shared com Zod).
+- Tratamento de erros com classes de exceção tipadas e middleware centralizado.
+
+Autenticação:
+- Autenticação por credenciais com JWT Bearer Token.
+- Controle de acesso por papel (USER / ADMIN): admins enviam broadcasts de sistema, usuários enviam notificações pessoais.
+- Proteção de rotas no frontend via beforeLoad do TanStack Router.
+
+DevOps & Infra:
+- Monorepo com npm workspaces (backend, frontend, packages/shared).
+- Infraestrutura local via Docker Compose: Redis e RabbitMQ.
+- Worker containerizado com suporte a hostnames internos Docker.
+
+Conceitos consolidados na prática:
+- Desacoplamento entre serviços e arquitetura orientada a eventos
+- Comunicação assíncrona com produtores e consumidores
+- Escalabilidade horizontal via workers consumidores
+- Containerização de serviços com Docker
+- Distribuição de eventos em tempo real
+- Gerenciamento eficiente de estado e cache no frontend
+
+Resultados:
+- MVP completo e funcional cobrindo backend, frontend, mensageria, tempo real e autenticação.
+- Pipeline assíncrono real: HTTP → RabbitMQ → Redis Pub/Sub → Socket.IO → cliente.
+- Cache otimista no frontend: socket escreve direto no TanStack Query sem round-trip HTTP.`,
+      technologies: [
+        "React 19",
+        "Vite",
+        "TypeScript",
+        "TailwindCSS 4",
+        "ShadCN UI",
+        "TanStack Router",
+        "TanStack Query",
+        "Socket.IO",
+        "Zod",
+        "Axios",
+        "Node.js",
+        "Express 5",
+        "RabbitMQ",
+        "Redis",
+        "MongoDB",
+        "Prisma",
+        "JWT",
+        "Docker",
+      ],
+      links: [
+        {
+          type: "Github",
+          href: "https://github.com/yyurimelo/flow",
+          icon: <GitHubLogoIcon />,
+        },
+        {
+          type: "LinkedIn",
+          href: "https://www.linkedin.com/posts/yyurimelo_nodejs-typescript-express-ugcPost-7470469320708358145-1VnD/?utm_source=share&utm_medium=member_desktop&rcm=ACoAAFd2HhYBH2JIxcWjOSWC_80nF8elcoqKbbQ",
+          icon: <LinkedInLogoIcon />,
+        },
+      ],
+      media: {
+        image: null,
+        video: "/flow-preview.mp4",
+        video2: null,
+        wallpaper: "/flow-home-page.png",
+        carousel: ["/flow-home-page.png", "/flow-notification-detail.png"],
+      },
+    },
+    {
       title: "Lyra Chat",
       href: "https://lyra-chat-five.vercel.app/",
       dates: "2025",

@@ -21,8 +21,10 @@ import {
   SiMysql,
   SiSpringboot,
   SiReactrouter,
-  SiRailway
+  SiRailway,
+  SiRabbitmq
 } from "react-icons/si";
+import { DiRedis } from "react-icons/di";
 import {
   BiLogoTypescript,
   BiLogoMongodb,
@@ -76,6 +78,8 @@ export const skillsData = {
       { icon: <BiLogoPostgresql className="text-[#4169E1] size-12" /> },
       { icon: <SiMysql className="text-[#4479A1] size-12" /> },
       { icon: <FaDocker className="text-[#2496ED] size-12" /> },
+      { icon: <DiRedis className="text-[#DC382D] size-12" /> },
+      { icon: <SiRabbitmq className="text-[#FF6600] size-12" /> },
     ] as SkillIcon[]
   },
   fullstack: {
@@ -110,6 +114,8 @@ export const skillsData = {
       { icon: <BiLogoPostgresql className="text-[#4169E1] size-12" /> },
       { icon: <SiMysql className="text-[#4479A1] size-12" /> },
       { icon: <FaDocker className="text-[#2496ED] size-12" /> },
+      { icon: <DiRedis className="text-[#DC382D] size-12" /> },
+      { icon: <SiRabbitmq className="text-[#FF6600] size-12" /> },
       { icon: <FaGithub className="size-12" /> },
       { icon: <IoLogoVercel className="size-12" /> },
       { icon: <SiRailway className="size-12" /> },
