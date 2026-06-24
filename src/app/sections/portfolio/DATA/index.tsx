@@ -6,7 +6,7 @@ export const DATA = {
     {
       title: "Flow",
       href: "https://github.com/yyurimelo/flow",
-      dates: "Mai - Jun 2026",
+      dates: "Mai 2026 - Jun 2026",
       active: true,
       resume: "Sistema de notificações em tempo real com pipeline assíncrono real: HTTP → RabbitMQ → Redis Pub/Sub → Socket.IO → cliente.",
       description: `Desenvolvi o Flow para estudar sistemas distribuídos na prática. Muitas vezes estudamos conceitos como filas, mensageria, workers e comunicação em tempo real apenas pela teoria — o Flow foi o ambiente onde entendi como tudo isso funciona de verdade.
