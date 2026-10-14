@@ -6,6 +6,12 @@ import { Section } from "@/components/ui/section";
 import { useTheme } from "next-themes";
 import { useEffect, useState } from "react";
 import { Button } from "@/components/ui/button";
+import {
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuItem,
+  DropdownMenuTrigger
+} from "@/components/ui/dropdown-menu";
 import { ContactButton } from "./contact-details";
 import Me from "./me/page";
 
@@ -112,11 +118,25 @@ export default function Hero() {
               <BoxReveal boxColor={"#ab0fff"} duration={0.5}>
                 <div className="flex items-center mt-[1.6rem] gap-2 h-9">
                   <ContactButton />
-                  <Button asChild className="rounded-full h-full" variant="outline">
-                    <a href="Yuri_Melo_dos_Santos.pdf" download>
-                      Download CV
-                    </a>
-                  </Button>
+                  <DropdownMenu>
+                    <DropdownMenuTrigger asChild>
+                      <Button className="rounded-full h-full" variant="outline">
+                        Download CV
+                      </Button>
+                    </DropdownMenuTrigger>
+                    <DropdownMenuContent align="start">
+                      <DropdownMenuItem asChild>
+                        <a href="/yuri_melo_fullstack_cv_en.pdf" download>
+                          English
+                        </a>
+                      </DropdownMenuItem>
+                      <DropdownMenuItem asChild>
+                        <a href="/yuri_melo_fullstack_cv.pdf" download>
+                          Português
+                        </a>
+                      </DropdownMenuItem>
+                    </DropdownMenuContent>
+                  </DropdownMenu>
                 </div>
               </BoxReveal>
             </div>
