@@ -190,7 +190,7 @@ Resultados:
     {
       title: "iPrazos - Site",
       href: "https://www.iprazos.adv.br/",
-      dates: "Ago 2025 - Out 2025",
+      dates: "Ago 2025 - Mar 2026",
       active: true,
       resume: "Desenvolvimento do site oficial do iPrazos, uma plataforma jurídica focada em automação e simplificação de prazos processuais.",
       description: `O projeto consistiu na criação do site institucional do iPrazos — uma plataforma jurídica que automatiza e simplifica o controle de prazos processuais. 
