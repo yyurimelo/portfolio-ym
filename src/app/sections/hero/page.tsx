@@ -126,12 +126,12 @@ export default function Hero() {
                     </DropdownMenuTrigger>
                     <DropdownMenuContent align="start">
                       <DropdownMenuItem asChild>
-                        <a href="/yuri_melo_fullstack_cv_en.pdf" download>
+                        <a href="/yuri_melo_cv_en.pdf" download>
                           English
                         </a>
                       </DropdownMenuItem>
                       <DropdownMenuItem asChild>
-                        <a href="/yuri_melo_fullstack_cv.pdf" download>
+                        <a href="/yuri_melo_cv.pdf" download>
                           Português
                         </a>
                       </DropdownMenuItem>
