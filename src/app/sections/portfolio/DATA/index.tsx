@@ -1,8 +1,97 @@
 import { GitHubLogoIcon, LinkedInLogoIcon } from "@radix-ui/react-icons";
-import { Globe } from "lucide-react";
+import { Globe, Sparkles } from "lucide-react";
 
 export const DATA = {
   projects: [
+    {
+      title: "Flock",
+      href: "https://www.flock.cam/",
+      dates: "Mai 2026 - Atual",
+      active: true,
+      resume: "Plataforma de memórias de eventos: convidados enviam fotos e vídeos por um QR code e o anfitrião recebe um Wrapped curado por IA no fim da festa.",
+      description: `O Flock é um produto real, em produção, que junta as fotos e os vídeos de todos os convidados de um evento — casamentos, festas de 15 anos, aniversários e confraternizações — por um único QR code. O convidado não baixa aplicativo, não cria conta e não paga nada: aponta a câmera, abre no navegador e envia. Depois da festa, o anfitrião recebe o Wrapped: a noite contada pelos olhos de quem estava lá.
+
+Faço parte do time que constrói o Flock, atuando como full-stack com foco no Wrapped, no painel do anfitrião, na landing e no painel administrativo.
+
+O Wrapped — o diferencial do produto:
+Coletar fotos é commodity; o que o Flock entrega é a curadoria. Cada mídia enviada passa por uma fila de classificação com IA que identifica o momento da festa (Retratos, Cerimonial, Pista de dança, Parabéns...) e descarta conteúdo impróprio. O resultado é uma página pronta: capa com o nome do evento, um replay em formato de stories com os números da noite, a galeria organizada por momento, curtidas e comentários, fotolivro em PDF, modo para projetar na festa e um card para compartilhar nos stories. No exemplo do vídeo, o XV da Ana Flor: 356 memórias enviadas por 122 câmeras, separadas em 14 momentos.
+
+Aspectos técnicos — Web (site, criação de evento, painel e Wrapped):
+- Next.js com React e TypeScript, organizado por features (rotas só orquestram; lógica em src/features).
+- Animações com GSAP e Motion, respeitando prefers-reduced-motion.
+- Replay estilo stories, lightbox de foto e vídeo com marca d'água e navegação por gestos (@use-gesture).
+- Fotolivro interativo com page-flip e exportação para PDF com jsPDF, idêntico ao preview na tela.
+- Painel do anfitrião com QR code personalizável, gerenciamento de mídias e métricas com Recharts.
+- Painel administrativo com abas, métricas de venda e listas paginadas.
+- Paywall visual por plano e fluxo de checkout com Pix.
+
+Aspectos técnicos — App do convidado:
+- Expo (React Native Web) publicado como web app, com câmera, galeria, upload e visor do evento.
+- Rolo de câmera "descartável", curtidas e comentários no visor da galeria.
+
+Aspectos técnicos — Back-end:
+- Convex como backend reativo: schema, queries, mutations, actions e crons em TypeScript.
+- Classificação de momentos por IA com o GPT-5.6 Luna, executada em Workpool com retry exponencial, controle de concorrência e teto de custo por evento.
+- Guardrail de conteúdo: mídias impróprias são removidas do banco e do storage automaticamente.
+- Armazenamento de mídia no Cloudflare R2 com upload direto por URL assinada.
+- Pagamento único via Pix com Abacate Pay e webhooks, incluindo reembolso e lembretes de checkout abandonado.
+- E-mails transacionais com Resend, rate limiting e agregações para contadores.
+
+Qualidade & DevOps:
+- Monorepo com npm workspaces (apps/web, apps/expo, packages/backend, packages/shared).
+- Testes unitários com Vitest e Jest ao lado do código, e smoke tests E2E com Playwright.
+- CI com lint, typecheck, knip e jscpd bloqueando código morto e duplicado; deploy do Convex a cada push na main.
+- Deploy na Vercel, observabilidade com Sentry e analytics de produto com PostHog.
+
+Resultados:
+- Produto em produção com eventos reais já realizados.
+- Wrapped que transforma centenas de arquivos soltos em uma experiência curada e compartilhável.
+- Experiência prática com produto de verdade: pagamento, IA em fila, storage, métricas e trabalho em time.`,
+      technologies: [
+        "Next.js",
+        "React",
+        "TypeScript",
+        "Expo",
+        "React Native Web",
+        "TailwindCSS",
+        "GSAP",
+        "Motion",
+        "Convex",
+        "GPT-5.6 Luna",
+        "Cloudflare R2",
+        "Pix (Abacate Pay)",
+        "Resend",
+        "Vitest",
+        "Playwright",
+        "Sentry",
+        "PostHog",
+        "Vercel",
+      ],
+      links: [
+        {
+          type: "Website",
+          href: "https://www.flock.cam/",
+          icon: <Globe />,
+        },
+        {
+          type: "Wrapped de exemplo",
+          href: "https://www.flock.cam/wrapped/xv-da-ana-flor",
+          icon: <Sparkles />,
+        },
+      ],
+      media: {
+        image: null,
+        video: "/flock-wrapped-preview.mp4",
+        video2: null,
+        wallpaper: "/flock-wallpaper.png",
+        carousel: [
+          "/flock-wrapped-cover.png",
+          "/flock-wrapped-replay.png",
+          "/flock-wrapped-momentos.png",
+          "/flock-wrapped-share.png",
+        ],
+      },
+    },
     {
       title: "Flow",
       href: "https://github.com/yyurimelo/flow",
