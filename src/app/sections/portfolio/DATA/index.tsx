@@ -6,12 +6,12 @@ export const DATA = {
     {
       title: "Flock",
       href: "https://www.flock.cam/",
-      dates: "Mai 2026 - Atual",
+      dates: "Abr 2026 - Atual",
       active: true,
       resume: "Plataforma de memórias de eventos: convidados enviam fotos e vídeos por um QR code e o anfitrião recebe um Wrapped curado por IA no fim da festa.",
       description: `O Flock é um produto real, em produção, que junta as fotos e os vídeos de todos os convidados de um evento — casamentos, festas de 15 anos, aniversários e confraternizações — por um único QR code. O convidado não baixa aplicativo, não cria conta e não paga nada: aponta a câmera, abre no navegador e envia. Depois da festa, o anfitrião recebe o Wrapped: a noite contada pelos olhos de quem estava lá.
 
-Faço parte do time que constrói o Flock, atuando como full-stack com foco no Wrapped, no painel do anfitrião, na landing e no painel administrativo.
+Faço parte do time que constrói o Flock, atuando como full-stack com foco no Wrapped, no painel do anfitrião, na landing e no painel administrativo. A plataforma já passou de 1.000 eventos criados.
 
 O Wrapped — o diferencial do produto:
 Coletar fotos é commodity; o que o Flock entrega é a curadoria. Cada mídia enviada passa por uma fila de classificação com IA que identifica o momento da festa (Retratos, Cerimonial, Pista de dança, Parabéns...) e descarta conteúdo impróprio. O resultado é uma página pronta: capa com o nome do evento, um replay em formato de stories com os números da noite, a galeria organizada por momento, curtidas e comentários, fotolivro em PDF, modo para projetar na festa e um card para compartilhar nos stories. No exemplo do vídeo, o XV da Ana Flor: 356 memórias enviadas por 122 câmeras, separadas em 14 momentos.
@@ -31,7 +31,10 @@ Aspectos técnicos — App do convidado:
 
 Aspectos técnicos — Back-end:
 - Convex como backend reativo: schema, queries, mutations, actions e crons em TypeScript.
-- Classificação de momentos por IA com o GPT-5.6 Luna, executada em Workpool com retry exponencial, controle de concorrência e teto de custo por evento.
+- Classificação e legenda das fotos do Wrapped com IA generativa (GPT-6 Luna), executada em Workpool com retry exponencial, controle de concorrência e teto de custo por evento.
+- Fallback de modelo: o Gemini 2.5 Flash-Lite assume a geração do Wrapped se o GPT-6 Luna falhar.
+- Bot de vendas com GPT-6 Luna: conduz a conversa, lê as fotos enviadas pelo lead e decide o follow-up.
+- Agentes de IA para automação de atendimento e processos comerciais.
 - Guardrail de conteúdo: mídias impróprias são removidas do banco e do storage automaticamente.
 - Armazenamento de mídia no Cloudflare R2 com upload direto por URL assinada.
 - Pagamento único via Pix com Abacate Pay e webhooks, incluindo reembolso e lembretes de checkout abandonado.
@@ -40,11 +43,13 @@ Aspectos técnicos — Back-end:
 Qualidade & DevOps:
 - Monorepo com npm workspaces (apps/web, apps/expo, packages/backend, packages/shared).
 - Testes unitários com Vitest e Jest ao lado do código, e smoke tests E2E com Playwright.
-- CI com lint, typecheck, knip e jscpd bloqueando código morto e duplicado; deploy do Convex a cada push na main.
+- Pipelines de CI/CD com GitHub Actions (lint, typecheck, knip e jscpd bloqueando código morto e duplicado) e proteção da branch main, sem commit direto; deploy do Convex a cada push na main.
+- Carregamento de imagens otimizado com CDN.
 - Deploy na Vercel, observabilidade com Sentry e analytics de produto com PostHog.
 
 Resultados:
-- Produto em produção com eventos reais já realizados.
+- Produto em produção, com mais de 1.000 eventos criados.
+- Página inicial no Lighthouse (laboratório): Desempenho 98, Acessibilidade 100, Práticas recomendadas 96, SEO 100.
 - Wrapped que transforma centenas de arquivos soltos em uma experiência curada e compartilhável.
 - Experiência prática com produto de verdade: pagamento, IA em fila, storage, métricas e trabalho em time.`,
       technologies: [
@@ -57,8 +62,10 @@ Resultados:
         "GSAP",
         "Motion",
         "Convex",
-        "GPT-5.6 Luna",
+        "GPT-6 Luna",
+        "Gemini 2.5 Flash-Lite",
         "Cloudflare R2",
+        "GitHub Actions",
         "Pix (Abacate Pay)",
         "Resend",
         "Vitest",
@@ -211,7 +218,7 @@ Aspectos técnicos — Back-end:
 - Backend desenvolvido em .NET 8.0 com C#.
 - Arquitetura baseada em DDD (Domain Driven Design).
 - Comunicação em tempo real com SignalR.
-- Entity Framework para acesso a dados.
+- Entity Framework Core para acesso a dados.
 - Integração com Supabase para armazenamento de imagens e arquivos.
 - Banco de dados PostgreSQL utilizando Neon.
 
@@ -244,7 +251,7 @@ Resultados:
         "SignalR",
         "C#",
         ".NET 8",
-        "Entity Framework",
+        "Entity Framework Core",
         "PostgreSQL",
         "Supabase",
         "Google OAuth",
@@ -336,7 +343,10 @@ Resultados:
       description: `Projeto em andamento no desenvolvimento do sistema de tickets da plataforma Agile, uma ferramenta inteligente de gerenciamento de tarefas da 3Code. O foco principal é otimizar processos internos, melhorar a eficiência operacional da equipe e garantir que todas as tarefas sejam acompanhadas de forma precisa.
 
 Aspectos técnicos:
-- Desenvolvimento contínuo com React e Vite, garantindo performance e escalabilidade.
+- Front-end com React e Vite e back-end em C#/.NET.
+- Carregamento de tickets otimizado com índices no banco, paginação nas APIs e cache com TanStack Query.
+- Integração com APIs REST automatizada com Swagger e Orval, gerando tipagens e hooks.
+- Quadros Kanban para CRM e tickets e dashboards de KPIs por responsável.
 - Integração com inteligência artificial para automação de tarefas repetitivas.
 - Interface minimalista, personalizável e intuitiva para os usuários.
 - Monitoramento de métricas de desempenho e progresso das equipes.
@@ -358,6 +368,8 @@ Resultados esperados:
         "Dotnet",
         "React Query",
         "React Router DOM",
+        "Swagger",
+        "Orval",
       ],
       links: [
         {

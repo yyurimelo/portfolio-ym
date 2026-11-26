@@ -22,7 +22,8 @@ import {
   SiSpringboot,
   SiReactrouter,
   SiRailway,
-  SiRabbitmq
+  SiRabbitmq,
+  SiGithubactions
 } from "react-icons/si";
 import { DiRedis } from "react-icons/di";
 import {
@@ -63,7 +64,7 @@ export const skillsData = {
     title: "BACK-END",
     description: (
       <>
-        No back-end, desenvolvo APIs robustas e escaláveis com Node.js, NestJS, Express, C# .NET e Java Spring Boot, seguindo princípios de arquitetura limpa, SOLID e DDD. <br /> <br />Para persistência de dados, trabalho com PostgreSQL e MongoDB, utilizando ORMs como Prisma, Entity Framework e Mongoose. Tenho experiência com autenticação via OAuth 2.0, comunicação em tempo real com SignalR, integração com Supabase e arquitetura RESTful — garantindo segurança, performance e manutenibilidade nas aplicações.
+        No back-end, desenvolvo APIs robustas e escaláveis com Node.js, NestJS, Express, C# .NET e Java Spring Boot, seguindo princípios de arquitetura limpa, SOLID e DDD. <br /> <br />Para persistência de dados, trabalho com PostgreSQL e MongoDB, utilizando ORMs como Prisma, Entity Framework Core e Mongoose. Tenho experiência com autenticação via OAuth 2.0, comunicação em tempo real com SignalR, integração com Supabase e arquitetura RESTful, além de pipelines de CI/CD com GitHub Actions — garantindo segurança, performance e manutenibilidade nas aplicações.
       </>
     ),
     icons: [
@@ -80,13 +81,14 @@ export const skillsData = {
       { icon: <FaDocker className="text-[#2496ED] size-12" /> },
       { icon: <DiRedis className="text-[#DC382D] size-12" /> },
       { icon: <SiRabbitmq className="text-[#FF6600] size-12" /> },
+      { icon: <SiGithubactions className="text-[#2088FF] size-12" /> },
     ] as SkillIcon[]
   },
   fullstack: {
     title: "FULL-STACK",
     description: (
       <>
-        Atuo como desenvolvedor full-stack, cobrindo todo o ciclo de uma aplicação — da interface ao servidor, do banco de dados ao deploy em produção. <br /> <br />No front-end, trabalho com React, Next.js, TypeScript, Tailwind CSS e ShadCN/UI, construindo interfaces responsivas, performáticas e com foco em experiência do usuário. No back-end, desenvolvo APIs robustas com Node.js, NestJS, C# .NET e Java Spring Boot, integradas a bancos de dados relacionais e não relacionais como PostgreSQL e MongoDB. <br /> <br />Minha stack me permite construir aplicações completas com foco em escalabilidade, arquitetura limpa, boas práticas e entrega de valor real — do zero ao deploy.
+        Atuo como desenvolvedor full-stack, cobrindo todo o ciclo de uma aplicação — da interface ao servidor, do banco de dados ao deploy em produção. <br /> <br />No front-end, trabalho com React, Next.js, TypeScript, Tailwind CSS e ShadCN/UI, construindo interfaces responsivas, performáticas e com foco em experiência do usuário. No back-end, desenvolvo APIs robustas com Node.js, NestJS, C# .NET e Java Spring Boot, integradas a bancos de dados relacionais e não relacionais como PostgreSQL e MongoDB. Também integro IA generativa a produtos, com LLMs como GPT-6 Luna e Gemini, fallback de modelo e agentes de IA para automação. <br /> <br />Minha stack me permite construir aplicações completas com foco em escalabilidade, arquitetura limpa, boas práticas e entrega de valor real — do zero ao deploy.
       </>
     ),
     icons: [
@@ -116,6 +118,7 @@ export const skillsData = {
       { icon: <FaDocker className="text-[#2496ED] size-12" /> },
       { icon: <DiRedis className="text-[#DC382D] size-12" /> },
       { icon: <SiRabbitmq className="text-[#FF6600] size-12" /> },
+      { icon: <SiGithubactions className="text-[#2088FF] size-12" /> },
       { icon: <FaGithub className="size-12" /> },
       { icon: <IoLogoVercel className="size-12" /> },
       { icon: <SiRailway className="size-12" /> },

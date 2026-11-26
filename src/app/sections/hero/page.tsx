@@ -94,7 +94,7 @@ export default function Hero() {
                 <div className="md:flex flex md:items-center text-left text-xs md:text-[1rem]">
                   <h2>
                     {"<"}Desenvolvedor full-stack{" "}
-                    <span className="text-primary"> | UX DESIGNER {"/>"}</span>
+                    <span className="text-primary"> | Engenharia de Software e IA {"/>"}</span>
                   </h2>
                 </div>
               </BoxReveal>
